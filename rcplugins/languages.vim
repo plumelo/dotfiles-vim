@@ -7,4 +7,5 @@ Plug 'othree/xml.vim', { 'for': 'html'}
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['js', 'json'] }
 Plug 'tpope/vim-haml', { 'for': ['html', 'css', 'scss'] }
 Plug 'ap/vim-css-color', { 'for': ['html', 'css', 'scss', 'twig', 'js'] }
+Plug 'pearofducks/ansible-vim'
 

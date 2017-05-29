@@ -5,7 +5,7 @@
 set nocompatible
 " need to set the leader before defining any leader mapppings
 
-let mapleader = " "
+let mapleader = ","
 
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.vim/' . a:directory . '/*'

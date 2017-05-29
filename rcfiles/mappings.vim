@@ -39,9 +39,6 @@ map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 " Editor UI {{{
 " ---------
 
-" Toggle paste mode
-set pastetoggle=<F3>
-
 " Show highlight names under cursor
 nmap gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
 	\.'> trans<'.synIDattr(synID(line('.'), col('.'), 0), 'name').'> lo<'
@@ -50,9 +47,6 @@ nmap gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
 " }}}
 " Totally Custom {{{
 " --------------
-
-" Remove spaces at the end of lines
-nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 " Duplicate lines
 nnoremap <Leader>d m`YP``
@@ -63,6 +57,10 @@ vnoremap <C-Up> :m-2<CR>gv=gv
 vnoremap <C-Down> :m'>+<CR>gv=gv
 noremap  <C-Up> :m-2<CR>
 noremap  <C-Down> :m+<CR>
+
+" Indent
+vnoremap <TAB> >gv
+vnoremap <S-TAB> <gv
 
 " }}}
 
@@ -75,5 +73,4 @@ function! s:BufferEmpty() "{{{
 endfunction "}}}
 " }}}
 
-" vim: set ts=2 sw=2 tw=80 noet :
 " vim: set ts=2 sw=2 tw=80 noet :

@@ -7,3 +7,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'godlygeek/tabular', {'on': 'Tabularize'}
   nnoremap tt :Tabularize /
   vnoremap tt :Tabularize /
+
+Plug '907th/vim-auto-save'
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'

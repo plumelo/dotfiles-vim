@@ -7,9 +7,9 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 imap <c-x><c-o> <plug>(fzf-complete-line)
-nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <expr> <c-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 nnoremap <silent> <leader>a :Ag<cr>
-nnoremap <silent> <leader><Enter> :Buffers<cr>
+nnoremap <silent> <leader>b :Buffers<cr>
 nnoremap <silent> <Leader>c        :Colors<CR>
 nnoremap <silent> <leader>t :Tags<cr>
 

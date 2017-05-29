@@ -9,12 +9,14 @@ augroup nerd_loader
 augroup END
 
 " NERDTree {{{
-map <silent> - :NERDTreeToggle<CR>
+map <silent> <c-\> :NERDTreeToggle<CR>
 map <silent> <F2> :NERDTreeFind<CR>
 "autocmd StdinReadPre * let s:std_in=1
 " let NERDTreeShowHidden=1
 let g:NERDTreeWinSize=30
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeMouseMode=3
-let g:NERDTreeDirArrowExpandable = '├'
-let g:NERDTreeDirArrowCollapsible = '└'
+" let g:NERDTreeDirArrowExpandable = '├'
+" let g:NERDTreeDirArrowCollapsible = '└'
+let NERDTreeDirArrows=1
+let NERDTreeMinimalUI=1
