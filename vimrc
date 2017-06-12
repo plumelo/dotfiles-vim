@@ -1,7 +1,3 @@
-" Minimal configuration to set the foundation
-" major configuration and settings living in 
-" vim/rcfiles and vim/rcplugins
-
 set nocompatible
 " need to set the leader before defining any leader mapppings
 
@@ -16,8 +12,13 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
+" Load vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+endif
+
 call plug#begin('~/.vim/plugged')
-call s:SourceConfigFilesIn('rcplugins')
+call s:SourceConfigFilesIn('plugins_conf')
 call plug#end()
 
-call s:SourceConfigFilesIn('rcfiles')
+call s:SourceConfigFilesIn('general_conf')

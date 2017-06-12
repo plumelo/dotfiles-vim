@@ -1,1 +1,0 @@
-Plug 'rafi/vim-tinyline'

@@ -1,0 +1,4 @@
+~/.vim/swap/
+~/.vim/plugged/
+~/.vim/.netrwhist
+cache/neocompl/buffer_cache/
