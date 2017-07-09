@@ -38,9 +38,9 @@ if exists('*minpac#init')
   " syntax
   call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
   call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
-  call minpac#add('lepture/vim-jinja', {'type': 'opt'})
-  call minpac#add('evidens/vim-twig', {'type': 'opt'})
-  call minpac#add('othree/xml.vim', {'type': 'opt'})
+  call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
+  call minpac#add('qbbr/vim-twig', {'type': 'opt'})
+  call minpac#add('othree/xml.vim')
 endif
 
 filetype plugin indent on
@@ -168,6 +168,9 @@ autocmd MyAutoCmd VimEnter * packadd vim-sandwich
 autocmd MyAutoCmd VimEnter * packadd auto-pairs
 autocmd MyAutoCmd VimEnter * packadd vim-fugitive
 autocmd MyAutoCmd VimEnter * packadd vim-gitgutter
+autocmd MyAutoCmd VimEnter * packadd ansible-vim
+autocmd MyAutoCmd VimEnter * packadd Vim-Jinja2-Syntax
+autocmd MyAutoCmd VimEnter * packadd vim-twig
 
 
 
