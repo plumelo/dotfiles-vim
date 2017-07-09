@@ -17,12 +17,30 @@ if exists('*minpac#init')
 
   " theme
   call minpac#add('lifepillar/vim-solarized8')
+  call minpac#add('bling/vim-airline', {'type': 'opt'})
   " files
   call minpac#add('kien/ctrlp.vim')
   call minpac#add('justinmk/vim-dirvish', {'type': 'opt'})
   call minpac#add('maxboisvert/vim-simple-complete', {'type': 'opt'})
   call minpac#add('jremmen/vim-ripgrep', {'type': 'opt'})
-  call minpac#add('bling/vim-airline', {'type': 'opt'})
+  " editing
+  call minpac#add('romainl/vim-cool', {'type': 'opt'})
+  call minpac#add('jiangmiao/auto-pairs', {'type': 'opt'})
+  call minpac#add('ntpeters/vim-better-whitespace', {'type': 'opt'})
+  call minpac#add('farmergreg/vim-lastplace', {'type': 'opt'})
+  call minpac#add('tpope/vim-commentary', {'type': 'opt'})
+  call minpac#add('tpope/vim-unimpaired', {'type': 'opt'})
+  call minpac#add('tpope/vim-repeat', {'type': 'opt'})
+  call minpac#add('machakann/vim-sandwich', {'type': 'opt'})
+  " git
+  call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
+  call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
+  " syntax
+  call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
+  call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
+  call minpac#add('lepture/vim-jinja', {'type': 'opt'})
+  call minpac#add('evidens/vim-twig', {'type': 'opt'})
+  call minpac#add('othree/xml.vim', {'type': 'opt'})
 endif
 
 filetype plugin indent on
@@ -140,6 +158,17 @@ autocmd MyAutoCmd VimEnter * packadd vim-dirvish
 autocmd MyAutoCmd VimEnter * packadd vim-simple-complete
 autocmd MyAutoCmd VimEnter * packadd vim-airline
 autocmd MyAutoCmd VimEnter * packadd vim-ripgrep
+autocmd MyAutoCmd VimEnter * packadd vim-cool
+autocmd MyAutoCmd VimEnter * packadd vim-lastplace
+autocmd MyAutoCmd VimEnter * packadd vim-better-whitespace
+autocmd MyAutoCmd VimEnter * packadd vim-commentary
+autocmd MyAutoCmd VimEnter * packadd vim-repeat
+autocmd MyAutoCmd VimEnter * packadd vim-unimpaired
+autocmd MyAutoCmd VimEnter * packadd vim-sandwich
+autocmd MyAutoCmd VimEnter * packadd auto-pairs
+autocmd MyAutoCmd VimEnter * packadd vim-fugitive
+autocmd MyAutoCmd VimEnter * packadd vim-gitgutter
+
 
 
 " plugins mappings
