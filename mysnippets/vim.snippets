@@ -1,0 +1,23 @@
+snippet neol "NeoBundleLazy snippet"
+NeoBundle '${1:package}', {
+			\ 'lazy': 1,
+			\  'autoload' : {
+			\	$0
+			\  }
+			\ }
+endsnippet
+
+snippet ift "neobundle tap"
+if neobundle#tap('${1:package name}')
+	${VISUAL}$0
+    call neobundle#untap()
+endif
+endsnippet
+
+snippet min "minpac#add"
+call minpac#add('${1:package}', {'type': 'opt'})
+endsnippet
+
+snippet pack "au_packadd"
+autocmd MyAutoCmd ${1:package} * packadd ${2:package}
+endsnippet

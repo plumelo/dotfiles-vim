@@ -21,7 +21,6 @@ if exists('*minpac#init')
   " files
   call minpac#add('kien/ctrlp.vim')
   call minpac#add('justinmk/vim-dirvish', {'type': 'opt'})
-  call minpac#add('maxboisvert/vim-simple-complete', {'type': 'opt'})
   call minpac#add('jremmen/vim-ripgrep', {'type': 'opt'})
   " editing
   call minpac#add('romainl/vim-cool', {'type': 'opt'})
@@ -41,6 +40,12 @@ if exists('*minpac#init')
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
   call minpac#add('qbbr/vim-twig', {'type': 'opt'})
   call minpac#add('othree/xml.vim')
+  " completion
+  call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
+  call minpac#add('SirVer/ultisnips', {'type': 'opt'})
+  call minpac#add('honza/vim-snippets', {'type': 'opt'})
+  " lint
+  call minpac#add('w0rp/ale', {'type': 'opt'})
 endif
 
 filetype plugin indent on
@@ -54,8 +59,8 @@ set fileencoding=utf-8
 augroup MyAutoCmd
   autocmd!
 augroup END
-set complete=.,w,b,u,U,t,i,d
-set completeopt=menu,preview
+set complete+=.,w,b,u,U,t,i,d
+set completeopt+=menu,preview
 set backspace=indent,eol,start
 set incsearch
 set smartcase
@@ -87,15 +92,16 @@ set listchars=tab:▸\ ,trail:.
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 set hidden
+set switchbuf=useopen
 " mappings
 " <Leader>1: Toggle between paste mode
 nnoremap <Leader>1 :set invpaste paste?<CR>
 " <Leader>q:
-nnoremap <Leader>q :bd<cr>
+nnoremap <C-q> :bd<cr>
 " Make Y yank the rest of the line (like with C and D)
 nnoremap Y y$
 " windows
-nnoremap <C-x> <C-w><C-w>
+nnoremap <C-w> <C-w><C-w>
 " Key mapping for tab navigation
 nmap <C-Right> ]b
 nmap <C-Left> [b
@@ -155,7 +161,10 @@ endw
 xnoremap . :normal.<cr>
 
 autocmd MyAutoCmd VimEnter * packadd vim-dirvish
-autocmd MyAutoCmd VimEnter * packadd vim-simple-complete
+autocmd MyAutoCmd VimEnter * packadd neocomplete.vim
+autocmd MyAutoCmd VimEnter * packadd ultisnips
+autocmd MyAutoCmd VimEnter * packadd vim-snippets
+autocmd MyAutoCmd VimEnter * packadd ale
 autocmd MyAutoCmd VimEnter * packadd vim-airline
 autocmd MyAutoCmd VimEnter * packadd vim-ripgrep
 autocmd MyAutoCmd VimEnter * packadd vim-cool
@@ -171,13 +180,36 @@ autocmd MyAutoCmd VimEnter * packadd vim-gitgutter
 autocmd MyAutoCmd VimEnter * packadd ansible-vim
 autocmd MyAutoCmd VimEnter * packadd Vim-Jinja2-Syntax
 autocmd MyAutoCmd VimEnter * packadd vim-twig
-
-
-
+autocmd MyAutoCmd FileType jinja setlocal commentstring={#\ %s\ #}
+autocmd MyAutoCmd FileType twig setlocal commentstring={#\ %s\ #}
 " plugins mappings
 " completion
-let g:vsc_type_complete = 1
-let g:vsc_type_complete_length = 1
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" Set auto completion length.
+let g:neocomplete#auto_completion_start_length = 2
+" Set manual completion length.
+let g:neocomplete#manual_completion_start_length = 0
+" Set minimum keyword length.
+let g:neocomplete#min_keyword_length = 3
+let g:neocomplete#enable_auto_delimiter = 1
+let g:neocomplete#max_list = 30
+"set to where my /mysnippets directory exists
+" set runtimepath+=~/.vim/
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetsDir="~/.vim/mysnippets"
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'mysnippets']
+nnoremap <silent> <Leader>us :UltiSnipsEdit<CR>
 " statusline
 let g:airline_detect_modified=1
 let g:airline_inactive_collapse=1
@@ -193,3 +225,4 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
+" dirvish explorer
