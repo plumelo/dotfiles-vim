@@ -1,4 +1,2 @@
-~/.vim/swap/
-~/.vim/plugged/
-~/.vim/.netrwhist
-~/.vim/pack
+.netrwhist
+pack
