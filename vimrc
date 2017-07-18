@@ -20,7 +20,8 @@ if exists('*minpac#init')
   call minpac#add('bling/vim-airline', {'type': 'opt'})
   " files
   call minpac#add('kien/ctrlp.vim')
-  call minpac#add('justinmk/vim-dirvish', {'type': 'opt'})
+  call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
+  call minpac#add('Xuyuanp/git-nerdtree', {'type': 'opt'})
   call minpac#add('jremmen/vim-ripgrep', {'type': 'opt'})
   " editing
   call minpac#add('romainl/vim-cool', {'type': 'opt'})
@@ -31,6 +32,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-unimpaired', {'type': 'opt'})
   call minpac#add('tpope/vim-repeat', {'type': 'opt'})
   call minpac#add('machakann/vim-sandwich', {'type': 'opt'})
+  call minpac#add('sgur/vim-editorconfig', {'type': 'opt'})
   " git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
@@ -83,12 +85,12 @@ set timeout timeoutlen=1000 ttimeout ttimeoutlen=1
 set t_md=
 set wildmenu
 set wildmode=full
-set path& | let &path .= "**"
+set path=.,**
 set ruler
 set number
 set mouse=a
 set list
-set listchars=tab:▸\ ,trail:.
+set listchars=tab:»·,trail:·
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 set hidden
@@ -105,6 +107,7 @@ nnoremap <C-w> <C-w><C-w>
 " Key mapping for tab navigation
 nmap <C-Right> ]b
 nmap <C-Left> [b
+nmap <Tab> ]b
 " Spell
 map <silent> <F7> :set spell!<CR>
 imap <silent> <F7> <Esc> :set spell!<CR>
@@ -122,9 +125,9 @@ noremap L g_
 " Ctrl-s: Save
 nmap <c-s> :w!<CR>
 " Move current line down
-nnoremap <silent> <C-Down> mz:m+<cr>`z==
+nnoremap <silent> <C-Down> ]e
 " Move current line up
-nnoremap <silent> <C-Up> mz:m-2<cr>`z==
+nnoremap <silent> <C-Up> [e
 " Move selections down
 vnoremap <C-Down> :m'>+<cr>`<my`>mzgv`yo`z
 " Move selections up
@@ -160,7 +163,9 @@ endw
 " .: repeats the last command on every line
 xnoremap . :normal.<cr>
 
-autocmd MyAutoCmd VimEnter * packadd vim-dirvish
+autocmd MyAutoCmd VimEnter * packadd nerdtree
+autocmd MyAutoCmd VimEnter * packadd git-nerdtree
+autocmd MyAutoCmd VimEnter * packadd vim-editorconfig
 autocmd MyAutoCmd VimEnter * packadd neocomplete.vim
 autocmd MyAutoCmd VimEnter * packadd ultisnips
 autocmd MyAutoCmd VimEnter * packadd vim-snippets
@@ -182,9 +187,9 @@ autocmd MyAutoCmd VimEnter * packadd Vim-Jinja2-Syntax
 autocmd MyAutoCmd VimEnter * packadd vim-twig
 autocmd MyAutoCmd FileType jinja setlocal commentstring={#\ %s\ #}
 autocmd MyAutoCmd FileType twig setlocal commentstring={#\ %s\ #}
+autocmd MyAutoCmd WinEnter,FocusGained * checktime
 " plugins mappings
 " completion
-
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
@@ -225,4 +230,32 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
-" dirvish explorer
+" nerdtree
+nnoremap <S-Tab> :NERDTreeToggle<CR>
+nnoremap <F3> :NERDTreeFind<CR>
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeMouseMode=3
+let g:NERDTreeWinSize=31
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeShowHidden=1
+let g:NERDTreeKeepTreeInNewTab=1
+let g:NERDTreeDirArrows=0
+" gitgutter
+let g:gitgutter_map_keys = 0
+" editorconfig
+let g:editorconfig_verbose = 1
+" better whitespace
+autocmd MyAutoCmd FileWritePre * EnableStripWhitespaceOnSave
+" ansible
+let g:ansible_unindent_after_newline = 1
+" gitgutter
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '▎'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▋'
+highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE
+highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE
+highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE
+highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE
