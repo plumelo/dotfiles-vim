@@ -15,14 +15,19 @@ if exists('*minpac#init')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
+  " async
+  call minpac#add('Shougo/vimproc.vim', {'do': 'silent! !make'})
   " theme
   call minpac#add('lifepillar/vim-solarized8')
   call minpac#add('bling/vim-airline', {'type': 'opt'})
   " files
+  call minpac#add('xolox/vim-session')
+  call minpac#add('xolox/vim-misc')
   call minpac#add('kien/ctrlp.vim')
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
   call minpac#add('Xuyuanp/git-nerdtree', {'type': 'opt'})
   call minpac#add('jremmen/vim-ripgrep', {'type': 'opt'})
+  call minpac#add('eugen0329/vim-esearch', {'type': 'opt'})
   " editing
   call minpac#add('romainl/vim-cool', {'type': 'opt'})
   call minpac#add('jiangmiao/auto-pairs', {'type': 'opt'})
@@ -32,10 +37,11 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-unimpaired', {'type': 'opt'})
   call minpac#add('tpope/vim-repeat', {'type': 'opt'})
   call minpac#add('machakann/vim-sandwich', {'type': 'opt'})
+  call minpac#add('godlygeek/tabular', {'type': 'opt'})
   call minpac#add('sgur/vim-editorconfig', {'type': 'opt'})
   " git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
-  call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
+  call minpac#add('mhinz/vim-signify', {'type': 'opt'})
   " syntax
   call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
   call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
@@ -44,6 +50,7 @@ if exists('*minpac#init')
   call minpac#add('othree/xml.vim')
   " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
+  call minpac#add('Shougo/neco-syntax', {'type': 'opt'})
   call minpac#add('SirVer/ultisnips', {'type': 'opt'})
   call minpac#add('honza/vim-snippets', {'type': 'opt'})
   " lint
@@ -91,8 +98,8 @@ set number
 set mouse=a
 set list
 set listchars=tab:»·,trail:·
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+highlight NonText ctermfg=235
+highlight SpecialKey ctermfg=103
 set hidden
 set switchbuf=useopen
 " mappings
@@ -167,11 +174,13 @@ autocmd MyAutoCmd VimEnter * packadd nerdtree
 autocmd MyAutoCmd VimEnter * packadd git-nerdtree
 autocmd MyAutoCmd VimEnter * packadd vim-editorconfig
 autocmd MyAutoCmd VimEnter * packadd neocomplete.vim
+autocmd MyAutoCmd VimEnter * packadd neco-syntax
 autocmd MyAutoCmd VimEnter * packadd ultisnips
 autocmd MyAutoCmd VimEnter * packadd vim-snippets
 autocmd MyAutoCmd VimEnter * packadd ale
 autocmd MyAutoCmd VimEnter * packadd vim-airline
 autocmd MyAutoCmd VimEnter * packadd vim-ripgrep
+autocmd MyAutoCmd VimEnter * packadd vim-esearch
 autocmd MyAutoCmd VimEnter * packadd vim-cool
 autocmd MyAutoCmd VimEnter * packadd vim-lastplace
 autocmd MyAutoCmd VimEnter * packadd vim-better-whitespace
@@ -179,9 +188,10 @@ autocmd MyAutoCmd VimEnter * packadd vim-commentary
 autocmd MyAutoCmd VimEnter * packadd vim-repeat
 autocmd MyAutoCmd VimEnter * packadd vim-unimpaired
 autocmd MyAutoCmd VimEnter * packadd vim-sandwich
+autocmd MyAutoCmd VimEnter * packadd tabular
 autocmd MyAutoCmd VimEnter * packadd auto-pairs
 autocmd MyAutoCmd VimEnter * packadd vim-fugitive
-autocmd MyAutoCmd VimEnter * packadd vim-gitgutter
+autocmd MyAutoCmd VimEnter * packadd vim-signify
 autocmd MyAutoCmd VimEnter * packadd ansible-vim
 autocmd MyAutoCmd VimEnter * packadd Vim-Jinja2-Syntax
 autocmd MyAutoCmd VimEnter * packadd vim-twig
@@ -241,8 +251,8 @@ let g:NERDTreeShowBookmarks=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeKeepTreeInNewTab=1
 let g:NERDTreeDirArrows=0
-" gitgutter
-let g:gitgutter_map_keys = 0
+" ctrlp
+nnoremap <Leader>b :CtrlPBuffer<CR>
 " editorconfig
 let g:editorconfig_verbose = 1
 " better whitespace
@@ -250,12 +260,30 @@ autocmd MyAutoCmd FileWritePre * EnableStripWhitespaceOnSave
 " ansible
 let g:ansible_unindent_after_newline = 1
 " gitgutter
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '▎'
-let g:gitgutter_sign_removed = '▏'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▋'
-highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE
-highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE
-highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE
-highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE
+"let g:gitgutter_sign_added = '▎'
+"let g:gitgutter_sign_modified = '▎'
+"let g:gitgutter_sign_removed = '▏'
+"let g:gitgutter_sign_removed_first_line = '▔'
+"let g:gitgutter_sign_modified_removed = '▋'
+"highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE
+"highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE
+"highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE
+"highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE
+"highlight clear SignColumn
+" esearch
+let g:esearch = {
+  \ 'adapter':    'rg',
+  \ 'backend':    'vimproc',
+  \ 'out':        'win',
+  \ 'batch_size': 1000,
+  \ 'use':        ['visual', 'hlsearch', 'last'],
+  \}
+" session management
+let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+nnoremap <Leader>so :OpenSession
+nnoremap <Leader>ss :SaveSession
+nnoremap <Leader>sd :DeleteSession<CR>
+nnoremap <Leader>sc :CloseSession<CR>
