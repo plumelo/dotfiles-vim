@@ -169,7 +169,7 @@ while c <= 'z'
 endw
 " .: repeats the last command on every line
 xnoremap . :normal.<cr>
-
+" autocommands
 autocmd MyAutoCmd VimEnter * packadd nerdtree
 autocmd MyAutoCmd VimEnter * packadd git-nerdtree
 autocmd MyAutoCmd VimEnter * packadd vim-editorconfig
@@ -257,7 +257,6 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 let g:editorconfig_verbose = 1
 " better whitespace
 autocmd MyAutoCmd BufWritePre * StripWhitespace
-
 " ansible
 let g:ansible_unindent_after_newline = 1
 " esearch
