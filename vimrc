@@ -256,20 +256,10 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 " editorconfig
 let g:editorconfig_verbose = 1
 " better whitespace
-autocmd MyAutoCmd FileWritePre * EnableStripWhitespaceOnSave
+autocmd MyAutoCmd BufWritePre * StripWhitespace
+
 " ansible
 let g:ansible_unindent_after_newline = 1
-" gitgutter
-"let g:gitgutter_sign_added = '▎'
-"let g:gitgutter_sign_modified = '▎'
-"let g:gitgutter_sign_removed = '▏'
-"let g:gitgutter_sign_removed_first_line = '▔'
-"let g:gitgutter_sign_modified_removed = '▋'
-"highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE
-"highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE
-"highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE
-"highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE
-"highlight clear SignColumn
 " esearch
 let g:esearch = {
   \ 'adapter':    'rg',
