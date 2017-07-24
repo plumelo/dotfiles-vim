@@ -23,12 +23,13 @@ if exists('*minpac#init')
   " files
   call minpac#add('xolox/vim-session')
   call minpac#add('xolox/vim-misc')
-  call minpac#add('kien/ctrlp.vim')
+  call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
   call minpac#add('Xuyuanp/git-nerdtree', {'type': 'opt'})
   call minpac#add('jremmen/vim-ripgrep', {'type': 'opt'})
   call minpac#add('eugen0329/vim-esearch', {'type': 'opt'})
   " editing
+  call minpac#add('easymotion/vim-easymotion', {'type': 'opt'})
   call minpac#add('romainl/vim-cool', {'type': 'opt'})
   call minpac#add('jiangmiao/auto-pairs', {'type': 'opt'})
   call minpac#add('ntpeters/vim-better-whitespace', {'type': 'opt'})
@@ -181,6 +182,7 @@ autocmd MyAutoCmd VimEnter * packadd ale
 autocmd MyAutoCmd VimEnter * packadd vim-airline
 autocmd MyAutoCmd VimEnter * packadd vim-ripgrep
 autocmd MyAutoCmd VimEnter * packadd vim-esearch
+autocmd MyAutoCmd VimEnter * packadd vim-easymotion
 autocmd MyAutoCmd VimEnter * packadd vim-cool
 autocmd MyAutoCmd VimEnter * packadd vim-lastplace
 autocmd MyAutoCmd VimEnter * packadd vim-better-whitespace
@@ -246,7 +248,7 @@ nnoremap <F3> :NERDTreeFind<CR>
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeMouseMode=3
-let g:NERDTreeWinSize=31
+let g:NERDTreeWinSize=25
 let g:NERDTreeShowBookmarks=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeKeepTreeInNewTab=1
@@ -276,3 +278,5 @@ nnoremap <Leader>so :OpenSession
 nnoremap <Leader>ss :SaveSession
 nnoremap <Leader>sd :DeleteSession<CR>
 nnoremap <Leader>sc :CloseSession<CR>
+" easymotion
+let g:EasyMotion_leader_key = '<Leader>'
