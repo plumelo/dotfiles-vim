@@ -1,4 +1,4 @@
-- neobundle plugins manager
+- neobundle plugin manager
 - faster startup
 - lazy loading plugins
 
