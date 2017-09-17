@@ -4,16 +4,6 @@ silent! source $VIMRUNTIME/defaults.vim
 
 runtime config/plugins.vim
 
-" Startup time.
-if !v:vim_did_enter && has('reltime')
-  let g:startuptime = reltime()
-  augroup vimrc-startuptime
-    autocmd! VimEnter * let g:startuptime = reltime(g:startuptime)
-    \                 | redraw
-    \                 | echomsg 'startuptime: ' . reltimestr(g:startuptime)
-  augroup END
-endif
-
 filetype plugin indent on
 
 NeoBundleCheck
@@ -61,9 +51,6 @@ noremap gj j
 noremap gk k
 " Yank to the end of line. (It is same as C and D)
 nnoremap Y y$
-" Current line at center of window and open the folding.
-noremap n nzzzv
-noremap N Nzzzv
 " Very magic by default.
 nnoremap / /\v
 nnoremap ? ?\v
@@ -98,43 +85,6 @@ command! Q q
 nnoremap <tab> <c-w>w
 
 cnoremap <C-a> <Home>
-cnoremap <C-b> <Left>
-cnoremap <C-d> <Del>
-cnoremap <C-f> <Right>
-cnoremap <C-k> <C-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
-cnoremap <C-n> <Down>
-cnoremap <C-p> <Up>
-
-" smooth scroll
-let s:scroll_time_ms = 100
-let s:scroll_precision = 8
-function! CohamaSmoothScroll(dir, windiv, factor)
-  let cl = &cursorline
-  let cc = &cursorcolumn
-  set nocursorline nocursorcolumn
-  let height = winheight(0) / a:windiv
-  let n = height / s:scroll_precision
-  if n <= 0
-    let n = 1
-  endif
-  let wait_per_one_move_ms = s:scroll_time_ms / s:scroll_precision * a:factor
-  let i = 0
-  let scroll_command = a:dir == "down" ?
-        \ "normal! " . n . "\<C-E>" . n ."j" :
-        \ "normal! " . n . "\<C-Y>" . n ."k"
-  while i < s:scroll_precision
-    let i = i + 1
-    execute scroll_command
-    execute "sleep " . wait_per_one_move_ms . "m"
-    redraw
-  endwhile
-  let &cursorline = cl
-  let &cursorcolumn = cc
-endfunction
-nnoremap <silent><expr> <C-d> v:count == 0 ? ":call CohamaSmoothScroll('down', 2, 1)\<CR>" : "\<C-d>"
-nnoremap <silent><expr> <C-u> v:count == 0 ? ":call CohamaSmoothScroll('up', 2, 1)\<CR>" : "\<C-u>"
-nnoremap <silent><expr> <C-f> v:count == 0 ? ":call CohamaSmoothScroll('down', 1, 2)\<CR>" : "\<C-f>"
-nnoremap <silent><expr> <C-b> v:count == 0 ? ":call CohamaSmoothScroll('up', 1, 2)\<CR>" : "\<C-b>"
 
 let g:loaded_2html_plugin = 1
 let g:loaded_getscriptPlugin = 1
@@ -149,3 +99,13 @@ let g:ruby_no_special_methods = 1
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Startup time.
+if !v:vim_did_enter && has('reltime')
+  let g:startuptime = reltime()
+  augroup vimrc-startuptime
+    autocmd! VimEnter * let g:startuptime = reltime(g:startuptime)
+    \                 | redraw
+    \                 | echomsg 'startuptime: ' . reltimestr(g:startuptime)
+  augroup END
+endif
