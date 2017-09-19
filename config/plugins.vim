@@ -74,33 +74,17 @@ if neobundle#tap('fzf.vim')
 endif
 NeoBundle 'rafi/vim-tinyline'
 
-NeoBundle 'romgrk/winteract.vim'
-nmap <silent> gw :<C-u>InteractiveWindow<CR>
-
-NeoBundle 'Shougo/neocomplete.vim', {
-      \   'depends': ['Shougo/vimproc.vim'],
-      \   'vim_version': '7.3.885',
-      \   'disabled': !has('lua'),
+NeoBundle 'maralla/completor.vim', {
       \   'on_i': 1,
       \ }
-if neobundle#tap('neocomplete.vim')
-  function! neobundle#tapped.hooks.on_source(bundle)
-    let g:acp_enableAtStartup = 0
-    let g:neocomplete#enable_at_startup = 1
-    let g:neocomplete#enable_auto_select = 0
-    let g:neocomplete#enable_smart_case = 1
-    let g:neocomplete#sources#syntax#min_keyword_length = 3
-    let g:neocomplete#auto_completion_start_length = 2
-    let g:neocomplete#manual_completion_start_length = 0
-    let g:neocomplete#min_keyword_length = 3
-    let g:neocomplete#enable_auto_delimiter = 1
-    let g:neocomplete#max_list = 30
-  endfunction
-  call neobundle#untap()
-endif
+
+NeoBundle 'maralla/completor-neosnippet', {
+      \ 'depends': 'Shougo/neosnippet.vim',
+      \ 'on_i': 1,
+      \ }
 
 NeoBundle 'Shougo/neosnippet.vim', {
-      \   'depends': ['Shougo/neocomplete.vim', 'Shougo/neosnippet-snippets'],
+      \   'depends': ['maralla/completor.vim', 'Shougo/neosnippet-snippets'],
       \   'on_cmd': 'NeoSnippetEdit',
       \   'on_i': 1,
       \ }
@@ -113,7 +97,6 @@ if neobundle#tap('neosnippet.vim')
           \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
     smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
           \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
     if has('conceal')
       set conceallevel=2 concealcursor=niv
     endif
