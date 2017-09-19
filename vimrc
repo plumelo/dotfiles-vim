@@ -2,6 +2,10 @@
 unlet! skip_defaults_vim
 silent! source $VIMRUNTIME/defaults.vim
 
+augroup MyAutoGroup
+  autocmd!
+augroup END
+
 runtime config/plugins.vim
 
 filetype plugin indent on
@@ -49,8 +53,6 @@ nmap <leader><leader> :source $MYVIMRC<cr>
 " Physical moving
 noremap j gj
 noremap k gk
-noremap gj j
-noremap gk k
 " Yank to the end of line. (It is same as C and D)
 nnoremap Y y$
 " Very magic by default.
@@ -90,3 +92,7 @@ nnoremap <tab> <c-w>w
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Close immediately by q, set non-modifiable settings
+autocmd MyAutoGroup FileType help,qf,man,ref nnoremap <buffer> q :q!<CR>
+autocmd MyAutoGroup FileType help,qf,man,ref setlocal nospell ts=8 nolist ro nomod noma

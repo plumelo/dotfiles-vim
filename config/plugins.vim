@@ -106,22 +106,8 @@ endif
 
 NeoBundle 'Shougo/neosnippet-snippets'
 
-NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'gorkunov/smartpairs.vim'
-
-NeoBundle 'cohama/vim-hier'
-if neobundle#tap('vim-hier')
-  function! neobundle#tapped.hooks.on_source(bundle)
-    let g:hier_enabled = 1
-
-  endfunction
-  call neobundle#untap()
-endif
-
-NeoBundle 'thinca/vim-quickrun', {
-      \   'depends': 'Shougo/vimproc.vim',
-      \   'on_cmd': 'QuickRun',
-      \ }
 
 NeoBundle 'pearofducks/ansible-vim'
 if neobundle#tap('ansible-vim')
@@ -130,8 +116,6 @@ if neobundle#tap('ansible-vim')
   endfunction
   call neobundle#untap()
 endif
-
-NeoBundle 'thinca/vim-template'
 
 NeoBundle 'scrooloose/nerdtree'
 nnoremap <silent> - :<C-u>NERDTreeToggle<CR>
@@ -143,7 +127,7 @@ if neobundle#tap('nerdtree')
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeChDirMode = 1
     let g:NERDTreeMapCWD = "cd"
-    let g:NERDTreeDirArrows = 0
+    let g:NERDTreeShowHidden = 1
     let g:NERDTreeAutoDeleteBuffer = 1
     let g:NERDTreeMouseMode=3
   endfunction
@@ -176,6 +160,7 @@ NeoBundle 'tpope/vim-surround', {
       \ 'mappings': [['n', 'ys', 'ds', 'cs'], ['x', 'S']],
       \ }
 
+NeoBundle 'tpope/vim-rsi'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'bronson/vim-visual-star-search'
@@ -187,7 +172,7 @@ if neobundle#tap('vim-sneak')
   call neobundle#untap()
 endif
 
-NeoBundleLazy 'osyo-manga/vim-anzu', '', 'same', { 'autoload' : {
+NeoBundleLazy 'osyo-manga/vim-anzu', { 'autoload' : {
       \ 'mappings' : [
       \   ['n', '<Plug>(anzu-n-with-echo)'],
       \   ['N', '<Plug>(anzu-N-with-echo)'],
@@ -202,25 +187,19 @@ NeoBundle 'tpope/vim-commentary', {
 
 NeoBundle 'romainl/vim-cool'
 NeoBundle 'gregsexton/gitv'
-NeoBundle 'tsaleh/vim-align'
+NeoBundle 'junegunn/vim-easy-align'
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
-if neobundle#tap('vim-indent-guides')
+NeoBundle 'thirtythreeforty/lessspace.vim'
+NeoBundle 'mtth/scratch.vim'
+NeoBundle 'skywind3000/asyncrun.vim'
+nmap ,q :AsyncRun<Space>
+if neobundle#tap('skywind3000/asyncrun.vim')
   function! neobundle#tapped.hooks.on_source(bundle)
-    let g:indent_guides_enable_on_vim_startup = 1
-    let g:indent_guides_auto_colors = 0
-    let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray20 ctermbg=DarkGrey
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray18   ctermbg=Black
+    autocmd MyAutoGroup QuickFixCmdPost * botright copen 15
   endfunction
   call neobundle#untap()
 endif
 
-NeoBundle 'thirtythreeforty/lessspace.vim'
-NeoBundle 'junegunn/vim-journal'
-NeoBundle 'skywind3000/asyncrun.vim'
-NeoBundle 'vim-scripts/SearchComplete'
 NeoBundle 'osyo-manga/vim-over'
 nmap ,j :OverCommandLine<CR>
 
