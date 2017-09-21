@@ -27,8 +27,9 @@ if exists('*minpac#init')
   call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
   call minpac#add('qbbr/vim-twig', {'type': 'opt'})
-  call minpac#add('iamcco/markdown-preview.vim', {'type': 'opt'})
-  call minpac#add('iamcco/mathjax-support-for-mkdp')
+  " call minpac#add('iamcco/markdown-preview.vim', {'type': 'opt'})
+  call minpac#add('shime/vim-livedown', {'type': 'opt'})
+  " call minpac#add('iamcco/mathjax-support-for-mkdp')
 
   " Others
   call minpac#add('thirtythreeforty/lessspace.vim', {'type': 'opt'})
@@ -190,7 +191,7 @@ augroup plugins
   autocmd BufReadPre *.yml packadd ansible-vim
   autocmd BufReadPre *.twig packadd vim-twig
   autocmd BufReadPre *.jinja packadd vim-Jinja2-Syntax
-  autocmd BufReadPre *.md packadd markdown-preview.vim
+  autocmd BufReadPre *.md packadd vim-livedown
   autocmd BufRead * packadd vim-rsi
   autocmd BufRead * packadd vim-surround
   autocmd BufRead * packadd vim-commentary
