@@ -210,8 +210,8 @@ augroup plugins
   autocmd BufRead * packadd tcommand_vim
   autocmd BufRead * packadd vim-searchindex
 
-	command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
-	command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+  command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+  command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 
 " NerdTree
 nnoremap - :NERDTreeToggle<CR>
@@ -241,8 +241,5 @@ nmap <silent> ,t :<C-u>TCommand<CR>
 " Outline
 nmap ,o :<C-u>TToC<CR>
 
-" Slash
-if has('timers')
-  " Blink 2 times with 50ms interval
-  noremap <expr> <plug>(slash-after) slash#blink(2, 50)
-endif
+" CtrlP
+nmap ,l :CtrlPBuffer<CR>
