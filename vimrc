@@ -21,6 +21,7 @@ if exists('*minpac#init')
   "Tree/Files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
   call minpac#add('Xuyuanp/git-nerdtree', {'type': 'opt'})
+  call minpac#add('francoiscabrol/ranger.vim', {'type': 'opt'})
   call minpac#add('ctrlpvim/ctrlp.vim')
 
   "Syntax
@@ -45,7 +46,7 @@ if exists('*minpac#init')
   call minpac#add('tomtom/tlib_vim')
 
   " Completion
-  call minpac#add('maxboisvert/vim-simple-complete', {'type': 'opt'})
+  call minpac#add('maralla/completor.vim', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})

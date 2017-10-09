@@ -1,6 +1,7 @@
 augroup plugins
   autocmd!
   autocmd VimEnter * packadd nerdtree
+  autocmd VimEnter * packadd ranger.vim
   autocmd BufRead * packadd git-nerdtree
   autocmd BufReadPre *.yml packadd ansible-vim
   autocmd BufReadPre *.twig packadd vim-twig
@@ -15,7 +16,7 @@ augroup plugins
   autocmd BufReadPre * packadd vim-fugitive
   autocmd InsertLeave,InsertChange * packadd lessspace.vim
   autocmd BufReadPre,InsertEnter * packadd delimitMate
-  autocmd InsertEnter * packadd vim-simple-complete
+  autocmd InsertEnter * packadd completor.vim | CompletorEnable
   autocmd BufRead * packadd the_silver_searcher
   autocmd BufRead * packadd vim-ags
   autocmd BufRead * packadd vim-cool
