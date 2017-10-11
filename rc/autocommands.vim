@@ -2,6 +2,7 @@ augroup plugins
   autocmd!
   autocmd VimEnter * packadd nerdtree
   autocmd VimEnter * packadd ranger.vim
+  autocmd VimEnter * packadd toogle-maximize.vim
   autocmd BufRead * packadd git-nerdtree
   autocmd BufReadPre *.yml packadd ansible-vim
   autocmd BufReadPre *.twig packadd vim-twig

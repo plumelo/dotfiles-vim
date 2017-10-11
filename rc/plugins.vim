@@ -45,6 +45,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-dispatch', {'type': 'opt'})
   call minpac#add('tomtom/ttoc_vim', {'type': 'opt'})
   call minpac#add('tomtom/tcommand_vim', {'type': 'opt'})
+  call minpac#add('pmalek/toogle-maximize.vim', {'type': 'opt'})
   call minpac#add('tomtom/tlib_vim')
 
   " Completion
