@@ -70,14 +70,6 @@ let g:lightline = {
   \ }
 " \ 'separator': { 'left': '▊▋▌▍▎', 'right': '▎▍▌▋▊' },
 
-function! WizMod()
-  return &ft =~ 'help\|vimfiler' ? '' : &modified ? '» ' : &modifiable ? '' : ''
-endfunction
-
-function! WizRO()
-  return &ft !~? 'help\|vimfiler' && &readonly ? '× ' : ''
-endfunction
-
 function! WizGit()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
