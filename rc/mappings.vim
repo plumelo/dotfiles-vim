@@ -37,3 +37,7 @@ command! Q q
 
 " Move between splits
 nnoremap <tab> <c-w>w
+
+" automatic esc, really uncommon to type jj,jk
+inoremap jj <ESC>
+inoremap jk <Esc>

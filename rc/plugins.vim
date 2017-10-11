@@ -46,8 +46,7 @@ if exists('*minpac#init')
 
 
   " Completion
-  " call minpac#add('maralla/completor.vim', {'type': 'opt'})
-  " call minpac#add('Shougo/neocomplcache.vim', {'type': 'opt'})
+  call minpac#add('Shougo/neocomplcache.vim', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})

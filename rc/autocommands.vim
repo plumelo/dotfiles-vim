@@ -17,8 +17,7 @@ augroup plugins
   autocmd BufReadPre * packadd vim-fugitive
   autocmd InsertLeave,InsertChange * packadd lessspace.vim
   autocmd BufReadPre,InsertEnter * packadd delimitMate
-  " autocmd InsertEnter * packadd completor.vim | CompletorEnable
-  " autocmd InsertEnter * packadd neocomplcache.vim
+  autocmd InsertEnter * packadd neocomplcache.vim
   autocmd BufRead * packadd the_silver_searcher
   autocmd BufRead * packadd vim-ags
   autocmd BufRead * packadd vim-cool
@@ -29,13 +28,19 @@ augroup END
 " omnifuncs
 augroup omnifuncs
   au!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 augroup end
+
+augroup cursorline
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup END
 
 " Toggle between relative line numbering and normal
 function! NumberToggle()
@@ -49,6 +54,20 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" Statusline
+function! s:statusline_expr()
+  let mod = "%{&modified ? '[+] ' : !&modifiable ? '[x] ' : ''}"
+  let ro  = "%{&readonly ? '[RO] ' : ''}"
+  let ft  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
+  let fug = "%{exists('g:loaded_fugitive') ? fugitive#head() : ''}"
+  let sep = ' %= '
+  let pos = ' %-12(%l : %c%V%) '
+  let pct = ' %P'
+
+  return '[%n] %f %<'.mod.ro.ft.fug.sep.pos.'%*'.pct
+endfunction
+let &statusline = s:statusline_expr()
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
