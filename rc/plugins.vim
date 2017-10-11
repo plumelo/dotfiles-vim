@@ -17,7 +17,7 @@ if exists('*minpac#init')
  "Theme
   " call minpac#add('rafi/vim-tinyline')
   " call minpac#add('t9md/vim-ezbar')
-  call minpac#add('itchyny/lightline.vim')
+  " call minpac#add('itchyny/lightline.vim')
 
   "Tree/Files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
@@ -43,15 +43,11 @@ if exists('*minpac#init')
   call minpac#add('rhysd/clever-f.vim', {'type': 'opt'})
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
   call minpac#add('tpope/vim-dispatch', {'type': 'opt'})
-  call minpac#add('tomtom/ttoc_vim', {'type': 'opt'})
-  call minpac#add('tomtom/tcommand_vim', {'type': 'opt'})
-  call minpac#add('pmalek/toogle-maximize.vim', {'type': 'opt'})
-  call minpac#add('tomtom/tlib_vim')
+
 
   " Completion
   " call minpac#add('maralla/completor.vim', {'type': 'opt'})
-  call minpac#add('Shougo/neocomplcache.vim', {'type': 'opt'})
-  call minpac#add('Konfekt/vim-AutoCorrect', {'type': 'opt'})
+  " call minpac#add('Shougo/neocomplcache.vim', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -83,12 +79,12 @@ endif
 
 scriptencoding utf-8
 
-function! s:matchit(...) abort
-    if !exists('s:matchit_loaded')
-        runtime macros/matchit.vim
-        let s:matchit_loaded = 1
-    endif
-    let default_pairs = [&matchpairs]
-    let b:match_words = get(b:, 'match_words', '') . ',' . join(default_pairs, ',') . ',' . join(a:000, ',')
-endfunction
+" function! s:matchit(...) abort
+"     if !exists('s:matchit_loaded')
+"         runtime macros/matchit.vim
+"         let s:matchit_loaded = 1
+"     endif
+"     let default_pairs = [&matchpairs]
+"     let b:match_words = get(b:, 'match_words', '') . ',' . join(default_pairs, ',') . ',' . join(a:000, ',')
+" endfunction
 

@@ -1,13 +1,13 @@
 " Mappings
 nmap <leader><leader> :source $MYVIMRC<cr>
+nmap ,, :e<CR>
 " Physical moving
 noremap j gj
 noremap k gk
+nmap 0 ^
+nmap 9 $
 " Yank to the end of line. (It is same as C and D)
 nnoremap Y y$
-" Very magic by default.
-nnoremap / /\v
-nnoremap ? ?\v
 
 " Repeat on Visual-mode.
 vnoremap <silent> . :normal .<CR>
