@@ -1,5 +1,5 @@
 set guioptions-=M
-set clipboard=unnamedplus
+set clipboard=unnamed
 set ignorecase smartcase incsearch hlsearch
 set shiftround softtabstop=-1 shiftwidth=0 tabstop=2 expandtab
 set backspace=indent,eol,start whichwrap=b,s,<,>,[,] nostartofline
