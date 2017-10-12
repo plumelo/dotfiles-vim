@@ -11,6 +11,7 @@ set diffopt+=vertical
 " set completeopt+=menuone
 " set completeopt-=menu
 " set completeopt-=preview
+set complete=.,w,b,u,U,t,i,d
 " if &completeopt !~# 'noinsert\|noselect'
 "   set completeopt+=noselect
 " endif
