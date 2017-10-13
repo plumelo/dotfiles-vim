@@ -43,6 +43,8 @@ if exists('*minpac#init')
   call minpac#add('rhysd/clever-f.vim', {'type': 'opt'})
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
   call minpac#add('tpope/vim-dispatch', {'type': 'opt'})
+  call minpac#add('kana/vim-niceblock', {'type': 'opt'})
+  call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
 
 
   " Completion

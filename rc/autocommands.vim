@@ -24,6 +24,8 @@ augroup plugins
   autocmd BufRead * packadd vim-cool
   autocmd BufRead * packadd vim-gitgutter
   autocmd BufRead * packadd ale
+  autocmd BufRead * packadd vim-niceblock
+  autocmd BufRead * packadd vim-easy-align
 augroup END
 
 " omnifuncs
@@ -74,3 +76,9 @@ command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 nmap ,u :PackUpdate<CR>
 nmap ,c :PackClean<CR>
+
+" Initial message
+augroup InitialMessage
+  autocmd!
+  autocmd VimEnter * echo "vasy enjoy vimming!"
+augroup END
