@@ -5,7 +5,7 @@ augroup plugins
   autocmd BufRead * packadd git-nerdtree
   autocmd BufReadPre *.yml packadd ansible-vim
   autocmd BufReadPre *.twig packadd vim-twig
-  autocmd BufReadPre *.jinja packadd vim-Jinja2-Syntax
+  autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
   autocmd BufReadPre *.md packadd vim-livedown
   autocmd BufReadPre *.nginx packadd nginx.vim
   autocmd BufReadPre * packadd clever-f.vim
@@ -25,6 +25,11 @@ augroup plugins
   autocmd BufRead * packadd ale
   autocmd BufRead * packadd vim-niceblock
   autocmd BufRead * packadd vim-easy-align
+augroup END
+
+augroup filetype
+  au!
+  autocmd BufNewFile,BufRead *Vagrantfile set filetype=ruby
 augroup END
 
 " omnifuncs
