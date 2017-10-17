@@ -9,6 +9,10 @@ nmap 9 $
 " Yank to the end of line. (It is same as C and D)
 nnoremap Y y$
 
+" juggling with changes
+nnoremap ,; *``cgn
+nnoremap ,' #``cgN
+
 " Repeat on Visual-mode.
 vnoremap <silent> . :normal .<CR>
 vnoremap <silent> @q :normal @q<CR>
