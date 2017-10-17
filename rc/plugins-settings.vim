@@ -52,11 +52,10 @@ let g:netrw_browse_split=4
 let g:netrw_winsize=25
 
 " IndentLine
-
-
 let g:indentLine_char = '┊'
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
+
 " Cursor shape konsole
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
