@@ -33,6 +33,7 @@ if exists('*minpac#init')
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
 
   " Others
+  call minpac#add('Yggdroot/indentLine')
   call minpac#add('thirtythreeforty/lessspace.vim', {'type': 'opt'})
   call minpac#add('Raimondi/delimitMate', {'type': 'opt'})
   call minpac#add('tpope/vim-rsi', {'type': 'opt'})

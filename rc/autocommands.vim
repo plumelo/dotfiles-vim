@@ -17,7 +17,6 @@ augroup plugins
   autocmd BufReadPre * packadd vim-fugitive
   autocmd InsertLeave,InsertChange * packadd lessspace.vim
   autocmd BufReadPre,InsertEnter * packadd delimitMate
-  " autocmd InsertEnter * packadd neocomplcache.vim
   autocmd InsertEnter * packadd vim-mucomplete
   autocmd BufRead * packadd the_silver_searcher
   autocmd BufRead * packadd vim-ags
