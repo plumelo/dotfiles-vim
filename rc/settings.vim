@@ -7,7 +7,7 @@ set clipboard=unnamed
 set ignorecase smartcase incsearch hlsearch
 set shiftround softtabstop=-1 shiftwidth=0 tabstop=2 expandtab
 set backspace=indent,eol,start whichwrap=b,s,<,>,[,] nostartofline
-" set list listchars=tab:▸\ ,trail:.
+set list listchars=tab:▸\ ,trail:.
 if exists('+breakindent')
   set breakindent
   set breakindentopt=shift:-4
