@@ -3,7 +3,11 @@ set shortmess=I
 set autoread
 set cursorline
 set spelllang=en
-set clipboard=unnamed
+if has('unnamedplus')
+    set clipboard& clipboard+=unnamedplus
+else
+    set clipboard& clipboard+=unnamed
+endif
 set ignorecase smartcase incsearch hlsearch
 set shiftround softtabstop=-1 shiftwidth=0 tabstop=2 expandtab
 set backspace=indent,eol,start whichwrap=b,s,<,>,[,] nostartofline
@@ -15,14 +19,9 @@ if exists('+breakindent')
 endif
 set splitbelow splitright switchbuf& switchbuf+=useopen hidden
 set diffopt+=vertical
-" set completeopt-=longest
-" set completeopt+=menuone
-" set completeopt-=menu
-" set completeopt-=preview
-set complete=.,w,b,u,U,t,i,d
-" if &completeopt !~# 'noinsert\|noselect'
-"   set completeopt+=noselect
-" endif
+set completeopt+=menuone,noinsert,noselect
+set complete+=.,w,b,u,U,t,i,d
+set infercase
 set wildmenu wildmode=longest,full
 set timeoutlen=1000 ttimeoutlen=50 lazyredraw
 set noswapfile nobackup

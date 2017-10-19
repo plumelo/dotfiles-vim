@@ -46,6 +46,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-dispatch', {'type': 'opt'})
   call minpac#add('kana/vim-niceblock', {'type': 'opt'})
   call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
+  call minpac#add('christoomey/vim-system-copy', {'type': 'opt'})
 
 
   " Completion
@@ -59,6 +60,8 @@ if exists('*minpac#init')
   call minpac#add('w0rp/ale', {'type': 'opt'})
 
   " Search
+  " call minpac#add('eugen0329/vim-esearch', {'type': 'opt'})
+  call minpac#add('Shougo/vimproc.vim', {'do': 'silent! !make'})
   call minpac#add('ggreer/the_silver_searcher', {'type': 'opt'})
   call minpac#add('gabesoft/vim-ags', {'type': 'opt'})
 
@@ -66,7 +69,7 @@ endif
 
 filetype plugin indent on
 syntax on
-colorscheme onedark
+colorscheme molokai
 hi Comment cterm=italic
 
 if has('termguicolors')

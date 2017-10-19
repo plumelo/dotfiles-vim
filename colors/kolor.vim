@@ -143,11 +143,11 @@ if g:kolor_bold==0
   highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=none
   highlight Title           guifg=#a080ea    guibg=NONE       gui=none
   if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=none
+    highlight MatchParen      guifg=#2e2c29    guibg=NONE    gui=none
   elseif g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=none
+    highlight MatchParen      guifg=#2e2c29    guibg=NONE    gui=none
   else
-    highlight MatchParen      guifg=#ffffff     guibg=#ff0087   gui=none
+    highlight MatchParen      guifg=#ffffff     guibg=NONE   gui=none
   endif
 else
   highlight ErrorMsg        guifg=#d96e8a    guibg=NONE       gui=bold
@@ -164,11 +164,11 @@ else
   highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=bold
   highlight Title           guifg=#a080ea    guibg=NONE       gui=bold
   if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=bold
+    highlight MatchParen      guifg=#ffffff    guibg=NONE    gui=bold
   elseif g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=bold
+    highlight MatchParen      guifg=#ffffff    guibg=NONE    gui=bold
   else
-    highlight MatchParen      guifg=#ffffff     guibg=#ff0087   gui=bold
+    highlight MatchParen      guifg=#ffffff     guibg=NONE   gui=bold
   endif
 endif
 if g:kolor_italic==0
