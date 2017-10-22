@@ -89,7 +89,7 @@ highlight SpecialKey      guifg=#7eaefd    guibg=NONE       gui=none
 highlight NonText         guifg=#7eaefd    guibg=#2e2d2b    gui=none
 highlight Directory       guifg=#e6987a    guibg=NONE       gui=none
 highlight IncSearch       guifg=#000000    guibg=#ff5fd7    gui=none
-highlight LineNr          guifg=#808080    guibg=#242322    gui=none
+highlight LineNr          guifg=#808080    guibg=#2e2d2b    gui=none
 highlight StatusLine      guifg=#000000    guibg=#9e9e9e    gui=none
 highlight StatusLineNC    guifg=#b2b2b2    guibg=#4a4a4a    gui=none
 highlight VertSplit       guifg=#4a4a4a    guibg=#4a4a4a    gui=none
