@@ -3,6 +3,8 @@ let g:gruvbox_italic=1
 let s:colors = [
       \ 'monokai',
       \ 'kolor',
+      \ 'onedark',
+      \ 'seattle',
       \ 'badwolf',
       \ 'carbonized-dark',
       \ 'desertEx',
@@ -13,7 +15,6 @@ let s:colors = [
       \ 'mango',
       \ 'molokai',
       \ 'mustang',
-      \ 'onedark',
       \ 'sourcerer',
       \ 'space-vim-dark',
       \ 'smyck',

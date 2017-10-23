@@ -7,7 +7,8 @@ augroup END
 " omnifuncs
 augroup omnifuncs
   au!
-  autocmd FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd BufNewFile,BufRead *.scss             set ft=scss.css
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete

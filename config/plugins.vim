@@ -15,8 +15,6 @@ if exists('*minpac#init')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
  "Theme
-  " call minpac#add('rafi/vim-tinyline')
-  " call minpac#add('t9md/vim-ezbar')
   call minpac#add('itchyny/lightline.vim')
 
   "Tree/Files
@@ -27,6 +25,7 @@ if exists('*minpac#init')
   "Syntax
   call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
+  call minpac#add('othree/csscomplete.vim', {'type': 'opt'})
   call minpac#add('qbbr/vim-twig', {'type': 'opt'})
   call minpac#add('shime/vim-livedown', {'type': 'opt'})
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
@@ -48,11 +47,11 @@ if exists('*minpac#init')
   call minpac#add('christoomey/vim-system-copy', {'type': 'opt'})
   call minpac#add('zhamlin/tiler.vim', {'type': 'opt'})
 
-
   " Completion
-  call minpac#add('dirkwallenstein/vim-autocomplpop', {'type': 'opt'})
-  call minpac#add('dirkwallenstein/vim-localcomplete', {'type': 'opt'})
-  call minpac#add('vim-scripts/L9')
+  call minpac#add('ervandew/supertab', {'type': 'opt'})
+  call minpac#add('SirVer/ultisnips', {'type': 'opt'})
+  call minpac#add('honza/vim-snippets', {'type': 'opt'})
+
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
 
@@ -63,19 +62,13 @@ if exists('*minpac#init')
   call minpac#add('Shougo/vimproc.vim', {'do': 'silent! !make'})
   call minpac#add('ggreer/the_silver_searcher', {'type': 'opt'})
   call minpac#add('gabesoft/vim-ags', {'type': 'opt'})
+  call minpac#add('dkprice/vim-easygrep', {'type': 'opt'})
 
 endif
 
 filetype plugin indent on
 syntax on
-" colorscheme monokai
-" hi Comment cterm=italic
 
-" if has('termguicolors')
-"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"   set termguicolors
-" endif
 runtime! /config/colors.vim
 if &encoding !=? 'utf-8'
   let &termencoding = &encoding

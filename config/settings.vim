@@ -25,5 +25,5 @@ set noswapfile nobackup
 set number mouse=a
 set laststatus=2
 " set complete+=.,w,b,u,U,t,i,d,]
-set completeopt+=menu,menuone,preview,noinsert,noselect
+" set completeopt+=menu,menuone,preview,noinsert,noselect
 set infercase
