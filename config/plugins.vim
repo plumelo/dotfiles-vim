@@ -45,9 +45,10 @@ if exists('*minpac#init')
   call minpac#add('kana/vim-niceblock', {'type': 'opt'})
   call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
   call minpac#add('christoomey/vim-system-copy', {'type': 'opt'})
-  call minpac#add('zhamlin/tiler.vim', {'type': 'opt'})
+  call minpac#add('liangguohuan/vim-layout', {'type': 'opt'})
 
   " Completion
+  call minpac#add('szw/vim-kompleter')
   call minpac#add('ervandew/supertab', {'type': 'opt'})
   call minpac#add('SirVer/ultisnips', {'type': 'opt'})
   call minpac#add('honza/vim-snippets', {'type': 'opt'})

@@ -24,10 +24,11 @@ augroup plugins
   autocmd InsertLeave,InsertChange * packadd lessspace.vim
   autocmd BufReadPre,InsertEnter * packadd delimitMate
   autocmd BufRead * packadd vim-cool
-  autocmd VimEnter * packadd tiler.vim
+  autocmd VimEnter * packadd vim-layout
   autocmd BufRead * packadd vim-niceblock
   autocmd BufRead * packadd vim-easy-align
   " Completion and snippets
+  " autocmd InsertEnter * packadd vim-kompleter
   autocmd InsertEnter * packadd supertab
   autocmd InsertEnter * packadd ultisnips
   autocmd InsertEnter * packadd vim-snippets
@@ -38,5 +39,4 @@ augroup plugins
   " Lint
   autocmd BufRead * packadd ale
 augroup END
-
 
