@@ -1,6 +1,7 @@
 let g:gruvbox_italic=1
 
 let s:colors = [
+      \ 'NeoSolarized',
       \ 'monokai',
       \ 'kolor',
       \ 'onedark',
@@ -82,6 +83,6 @@ endif
 autocmd! ColorScheme * silent! call colors#_callback()
 
 try
-  colorscheme monokai
+  colorscheme NeoSolarized
 catch
 endtry
