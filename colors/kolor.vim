@@ -89,7 +89,7 @@ highlight SpecialKey      guifg=#7eaefd    guibg=NONE       gui=none
 highlight NonText         guifg=#7eaefd    guibg=#2e2d2b    gui=none
 highlight Directory       guifg=#e6987a    guibg=NONE       gui=none
 highlight IncSearch       guifg=#000000    guibg=#ff5fd7    gui=none
-highlight LineNr          guifg=#808080    guibg=#2e2d2b    gui=none
+highlight LineNr          guifg=#808080    guibg=#242322    gui=none
 highlight StatusLine      guifg=#000000    guibg=#9e9e9e    gui=none
 highlight StatusLineNC    guifg=#b2b2b2    guibg=#4a4a4a    gui=none
 highlight VertSplit       guifg=#4a4a4a    guibg=#4a4a4a    gui=none
@@ -143,11 +143,11 @@ if g:kolor_bold==0
   highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=none
   highlight Title           guifg=#a080ea    guibg=NONE       gui=none
   if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#2e2c29    guibg=NONE    gui=none
+    highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=none
   elseif g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#2e2c29    guibg=NONE    gui=none
+    highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=none
   else
-    highlight MatchParen      guifg=#ffffff     guibg=NONE   gui=none
+    highlight MatchParen      guifg=#ffffff     guibg=#ff0087   gui=none
   endif
 else
   highlight ErrorMsg        guifg=#d96e8a    guibg=NONE       gui=bold
@@ -164,11 +164,11 @@ else
   highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=bold
   highlight Title           guifg=#a080ea    guibg=NONE       gui=bold
   if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#ffffff    guibg=NONE    gui=bold
+    highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=bold
   elseif g:kolor_inverted_matchparen==0
-    highlight MatchParen      guifg=#ffffff    guibg=NONE    gui=bold
+    highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=bold
   else
-    highlight MatchParen      guifg=#ffffff     guibg=NONE   gui=bold
+    highlight MatchParen      guifg=#ffffff     guibg=#ff0087   gui=bold
   endif
 endif
 if g:kolor_italic==0

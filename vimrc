@@ -1,24 +1,44 @@
 " vimrc
+unlet! g:skip_defaults_vim
+silent! source $VIMRUNTIME/defaults.vim
 
-runtime! /config/plugins.vim
-runtime! /config/packadd.vim
-runtime! /config/settings.vim
-runtime! /config/mappings.vim
-runtime! /config/autocommands.vim
+augroup vimrc
+  autocmd!
+augroup END
 
-runtime! /config/plugins-configs/ags.vim
-runtime! /config/plugins-configs/align.vim
-runtime! /config/plugins-configs/ansible.vim
-runtime! /config/plugins-configs/clever.vim
-runtime! /config/plugins-configs/completion.vim
-runtime! /config/plugins-configs/ctrlp.vim
-runtime! /config/plugins-configs/cursor.vim
-runtime! /config/plugins-configs/indentline.vim
-runtime! /config/plugins-configs/layout.vim
-runtime! /config/plugins-configs/markdown.vim
-runtime! /config/plugins-configs/nerdtree.vim
-runtime! /config/plugins-configs/netrw.vim
-runtime! /config/plugins-configs/pairs.vim
-runtime! /config/plugins-configs/ranger.vim
-runtime! /config/plugins-configs/statusline.vim
+if has('vim_starting') && &encoding !=# 'utf-8'
+  set encoding=utf-8
+endif
 
+set shell=sh
+
+if has('vim_starting')
+  let g:startuptime = reltime()
+  autocmd vimrc VimEnter * let g:startuptime = reltime(g:startuptime) | redraw
+  \ | echomsg 'startuptime: ' . reltimestr(g:startuptime)
+endif
+
+let g:vimrc = expand('<sfile>')
+let g:vimrc_root = fnamemodify(g:vimrc, ':h')
+let s:rc_base_dir = g:vimrc_root . '/rc/'
+
+execute 'set runtimepath^=' . fnameescape(g:vimrc_root)
+execute 'set runtimepath^=' . fnameescape(s:rc_base_dir)
+
+" @param {string} path 'relative to s:rc_base_dir(~/.vim/rc/)'
+function! s:source_rc(path) abort
+  execute 'source' fnameescape(s:rc_base_dir . a:path)
+endfunction
+
+call s:source_rc('options.vim')
+call s:source_rc('mapping.vim')
+call s:source_rc('autocmd.vim')
+"call s:source_rc('command.vim')
+
+call s:source_rc('theme.vim')
+call s:source_rc('plugins.vim')
+call s:source_rc('nerdtree.vim')
+call s:source_rc('fzf.vim')
+call s:source_rc('align.vim')
+call s:source_rc('tiler.vim')
+call s:source_rc('search.vim')
