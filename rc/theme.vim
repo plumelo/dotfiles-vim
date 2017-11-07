@@ -15,4 +15,6 @@ if exists('+termguicolors')
 endif
 
 set background=dark
-colorscheme jay
+let g:kolor_italic=1
+let g:kolor_inverted_matchparen=1
+colorscheme kolor

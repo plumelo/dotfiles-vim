@@ -4,20 +4,24 @@ if !exists('g:syntax_on')
   syntax enable
 endif
 
-" visibility {{{
+" visibility
 set listchars=tab:▸\ ,trail:.
 set list
 set showbreak=\
+
+" hl trailing spaces instead of trail:c
+function! s:hl_trailing_spaces()
+  " Test
+  highlight! link TrailingSpaces Error
+  syntax match TrailingSpaces containedin=ALL /\s\+$/
+endfunction
+autocmd vimrc BufWinEnter,ColorScheme * call s:hl_trailing_spaces()
 
 " conceal
 set conceallevel=2
 set concealcursor=nv
 
-let g:indentLine_char                = '┊'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar    = '·'
-
-" completion {{{
+" completion
 set completeopt&
 set completeopt+=preview
 " set completeopt+=longest
@@ -25,7 +29,6 @@ set completeopt+=menuone
 set completeopt+=noinsert
 set completeopt+=noselect
 
-set previewheight=5
 set splitbelow " sohw preview window at bottom
 
 set infercase "Ignore case on insert completion
@@ -33,34 +36,31 @@ set showfulltag "Show rich info for ins-completion
 
 set wildmenu " Command line autocompletion
 set wildmode=longest,full
-" }}}
 
-" fold {{{
+" fold
 set foldenable "Enable fold
 set foldlevel=100 "Folds with a higher level will be closed
 "}}}
 
-" indent {{{
+" indent
 set expandtab "Use the appropriate number of spaces to insert a <Tab>
 set smarttab  "When on, a <Tab> in front of a line inserts blanks according to 'shiftwidth'.
 " set tabstop=2 "Number of spaces that a <Tab> in the file counts for
 set shiftwidth=2 "Number of spaces to use for each step of (auto)indent
 " set softtabstop=2 "Number of spaces that a <Tab> counts for while editing operations
 set shiftround "Round indent to multiple of 'shiftwidth'
-" }}}
 
-" lang {{{
+" lang
 set spelllang=en "Spell checking language
-" }}}
 
-" search {{{
+" search
 set incsearch "Incremental searching
 set ignorecase "Ignore case in search patterns
 set smartcase "Override the ignorecase option if the pattern contains upper case
 set hlsearch | nohlsearch "Highlight search patterns, support reloading
 "}}}
 
-" undo {{{
+" undo
 if has('persistent_undo')
   let &undodir = g:vimrc_root . '/undo'
   set undofile "Automatically saves undo history
@@ -68,15 +68,14 @@ if has('persistent_undo')
 endif
 "}}}
 
-" viminfo {{{
+" viminfo
 set viminfo&
  " !: store information when you exit Vim for later
 set viminfo+=!
  " n{filename}: specify viminfo file
 let &viminfo .= ',n' .  g:vimrc_root . '/info/viminfo.txt'
-" }}}
 
-" swap {{{
+" swap
 set swapfile "Use a swapfile for the buffer
 let &directory = g:vimrc_root . '/swap'
 if !isdirectory(&directory)
@@ -84,7 +83,7 @@ if !isdirectory(&directory)
 endif
 "}}}
 
-" misc {{{
+" misc
 set autoread "Automatically read file again which has been changed outside of Vim
 set backspace=indent,eol,start "Working of <BS>,<Del>,CTRL-W,CTRL-U
 "set colorcolumn=80
@@ -110,9 +109,8 @@ set virtualedit=block "Cursor can be positioned virtually when Visual-block mode
 set whichwrap=b,s,h,l,[,],<,> "Allow specified keys to move to the previous/next line
 set wrap "Lines longer than the width of the window will wrap
 set wrapscan "Searches wrap around the end of the file
-" }}}
 
-" misc-conditional {{{
+" misc-conditional
 if has('ambiwidth')
   " ref: https://gist.github.com/sgk/5991138
   set ambiwidth=double "Use twice the width of ASCII characters for Multibyte

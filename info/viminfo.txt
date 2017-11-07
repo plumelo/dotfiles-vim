@@ -11,24 +11,94 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/grep
+~MSle0~/\v\s+$
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:q
-|2,0,1509965846,,"q"
-:Gstatus
-|2,0,1509965828,,"Gstatus"
 :qa
-|2,0,1509965754,,"qa"
-:colorscheme kolor
-|2,0,1509964639,,"colorscheme kolor"
+|2,0,1510034930,,"qa"
 :PackUpdate
-|2,0,1509962388,,"PackUpdate"
+|2,0,1510034918,,"PackUpdate"
 :PackClean
-|2,0,1509962384,,"PackClean"
+|2,0,1510034914,,"PackClean"
+:w
+|2,0,1510034874,,"w"
+:q
+|2,0,1510031223,,"q"
+:set noexpandtab
+|2,0,1510031118,,"set noexpandtab"
+:bd
+|2,0,1510030634,,"bd"
+:ls
+|2,0,1510030586,,"ls"
+:P
+|2,0,1510030353,,"P"
+:map
+|2,0,1510030270,,"map"
+:map fzf
+|2,0,1510030265,,"map fzf"
+:set nostartofline
+|2,0,1510028769,,"set nostartofline"
+:set startofline=false
+|2,0,1510028736,,"set startofline=false"
+:TilerOpen defaults/main.yml
+|2,0,1509985803,,"TilerOpen defaults/main.yml"
+:TilerOpen tasks/riot.yml
+|2,0,1509985767,,"TilerOpen tasks/riot.yml"
+:Rg
+|2,0,1509985281,,"Rg"
+:bnext
+|2,0,1509983938,,"bnext"
+:.,.+1
+|2,0,1509983931,,".,.+1"
+:colorscheme jay
+|2,0,1509977969,,"colorscheme jay"
+:colorscheme hydrangea
+|2,0,1509977949,,"colorscheme hydrangea"
+:colorscheme NeoSolarized
+|2,0,1509977832,,"colorscheme NeoSolarized"
+:colorscheme pencil
+|2,0,1509977811,,"colorscheme pencil"
+:colorscheme kolor
+|2,0,1509977789,,"colorscheme kolor"
+:colorscheme candy256
+|2,0,1509977760,,"colorscheme candy256"
+:A
+|2,0,1509976969,,"A"
+:Q
+|2,0,1509981095,,"Q"
+:colorscheme molokai
+|2,0,1509981063,,"colorscheme molokai"
+:nmap
+|2,0,1509976160,,"nmap"
+:imap
+|2,0,1509976132,,"imap"
+:.,$!!
+|2,0,1509974859,,".,$!!"
+:Gitv
+|2,0,1509971961,,"Gitv"
+:Rg '8008'
+|2,0,1509971514,,"Rg '8008'"
+:Gread
+|2,0,1509971412,,"Gread"
+:Gitv! -v
+|2,0,1509970804,,"Gitv! -v"
+:Gitv!
+|2,0,1509970723,,"Gitv!"
+:Gst
+|2,0,1509970213,,"Gst"
+:Gitv:
+|2,0,1509970209,,"Gitv:"
+:Gitv! all
+|2,0,1509969055,,"Gitv! all"
+:Gitv! tests/Vagrantfile
+|2,0,1509968844,,"Gitv! tests/Vagrantfile"
+:Gstatus
+|2,0,1509968014,,"Gstatus"
+:x
+|2,0,1509967619,,"x"
 :set listchars=space:.
 |2,0,1509962286,,"set listchars=space:."
 :ShowWhiteToggle
@@ -47,10 +117,6 @@ $
 |2,0,1509957986,,"copen"
 :Rg 'w0rp/ale'
 |2,0,1509957947,,"Rg 'w0rp/ale'"
-:Rg
-|2,0,1509957877,,"Rg"
-:colorscheme jay
-|2,0,1509956695,,"colorscheme jay"
 :Find tiler
 |2,0,1509929380,,"Find tiler"
 :Fin
@@ -133,14 +199,8 @@ $
 |2,0,1509906042,,"Co"
 :packadd ansible-vim
 |2,0,1509905686,,"packadd ansible-vim"
-:colorscheme hydrangea
-|2,0,1509905441,,"colorscheme hydrangea"
-:colorscheme molokai
-|2,0,1509904037,,"colorscheme molokai"
 :colorscheme jellybeans
 |2,0,1509904023,,"colorscheme jellybeans"
-:colorscheme NeoSolarized
-|2,0,1509904008,,"colorscheme NeoSolarized"
 :packadd vim-gitgutter
 |2,0,1509902514,,"packadd vim-gitgutter"
 :call NixosPluginPath()
@@ -169,8 +229,6 @@ $
 |2,0,1509871436,,"h /dyn"
 :h v
 |2,0,1509871413,,"h v"
-:colorscheme pencil
-|2,0,1509871218,,"colorscheme pencil"
 :packadd Vim-Jinja2-Syntax
 |2,0,1509870658,,"packadd Vim-Jinja2-Syntax"
 :h -display
@@ -187,8 +245,6 @@ $
 |2,0,1509866527,,"Files colors/"
 :File
 |2,0,1509866519,,"File"
-:colorscheme candy256
-|2,0,1509865881,,"colorscheme candy256"
 :packadd fzf.vim
 |2,0,1509865500,,"packadd fzf.vim"
 :FZF colors/
@@ -233,8 +289,6 @@ $
 |2,0,1509845586,,"!mv packadd.vim rc/packadd"
 :e info/
 |2,0,1509845533,,"e info/"
-:w
-|2,0,1509845242,,"w"
 :e packadd.vim
 |2,0,1509845231,,"e packadd.vim"
 :e rc/autocmd.vim
@@ -280,21 +334,59 @@ $
 
 # Search String History (newest to oldest):
 ? \v\s+$
-|2,1,1509962356,,"\\v\\s+$"
+|2,1,1510031125,,"\\v\\s+$"
+?/\v\s+$
+|2,1,1510031089,47,"\\v\\s+$"
+?/\s\+$
+|2,1,1510031071,47,"\\s\\+$"
 ?/\s
-|2,1,1509959684,47,"\\s"
+|2,1,1510030831,47,"\\s"
+?/" }}}
+|2,1,1510030068,47,"\" }}}"
+?/ {{{
+|2,1,1510029970,47," {{{"
+?/set
+|2,1,1510029901,47,"set"
+?/\ \
+|2,1,1510029868,47,"\\ \\"
+?/\
+|2,1,1510029860,47,"\\"
+?//
+|2,1,1510029853,47,"/"
+?/nost
+|2,1,1510028754,47,"nost"
+?/federa
+|2,1,1509987712,47,"federa"
+?/matchparen
+|2,1,1509981194,47,"matchparen"
+?/federation
+|2,1,1509976494,47,"federation"
+?/integration
+|2,1,1509972728,47,"integration"
+?/8080
+|2,1,1509972586,47,"8080"
+?/8008
+|2,1,1509972540,47,"8008"
+?/8oo8
+|2,1,1509972532,47,"8oo8"
+? \%(^parent\)\@<! 
+|2,1,1509971967,,"\\%(^parent\\)\\@<! "
+? \s\+$
+|2,1,1509971961,,"\\s\\+$"
+? __START__
+|2,1,1509971961,,"__START__"
+? @$
+|2,1,1509969084,,"@$"
+?/Install synapse
+|2,1,1509967150,47,"Install synapse"
+? install --all
+|2,1,1509966000,,"install --all"
 ?//:
 |2,1,1509947744,47,"/:"
 ?/grep
 |2,1,1509923087,47,"grep"
-? @$
-|2,1,1509921304,,"@$"
 ?/copy
 |2,1,1509917095,47,"copy"
-? install --all
-|2,1,1509916102,,"install --all"
-?//
-|2,1,1509915215,47,"/"
 ?/conceal
 |2,1,1509878431,47,"conceal"
 ?/list
@@ -303,8 +395,34 @@ $
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@/home/vasy/.vim/rc/ansible.vim
+|2,3,1510034787,,"/home/vasy/.vim/rc/ansible.vim"
 @y
-|2,3,1509960609,,"y"
+|2,3,1510031404,,"y"
+@/home/vasy/.vim/rc/statusline.vim
+|2,3,1510030486,,"/home/vasy/.vim/rc/statusline.vim"
+@/home/vasy/Projects/nixos/modules/development/tilix.nix
+|2,3,1510027329,,"/home/vasy/Projects/nixos/modules/development/tilix.nix"
+@/home/vasy/Projects/nixos/modules/desktops/_sway.nix
+|2,3,1510026767,,"/home/vasy/Projects/nixos/modules/desktops/_sway.nix"
+@/home/vasy/Projects/nixos/modules/desktops/sway/sway.nix
+|2,3,1510026713,,"/home/vasy/Projects/nixos/modules/desktops/sway/sway.nix"
+@/home/vasy/Projects/nixos/modules/desktops/sway/wlc.nix
+|2,3,1510026642,,"/home/vasy/Projects/nixos/modules/desktops/sway/wlc.nix"
+@/home/vasy/Projects/nixos/modules/desktops/sway/index.nix
+|2,3,1510026604,,"/home/vasy/Projects/nixos/modules/desktops/sway/index.nix"
+@/home/vasy/Projects/nixos/modules/desktops/sway/brightnessctl.nix
+|2,3,1510026509,,"/home/vasy/Projects/nixos/modules/desktops/sway/brightnessctl.nix"
+@/home/vasy/Projects/nixos/modules/desktops/sway/alacritty.nix
+|2,3,1510026444,,"/home/vasy/Projects/nixos/modules/desktops/sway/alacritty.nix"
+@/home/vasy/Projects/nixos/modules/desktops/sway/config.nix
+|2,3,1510026370,,"/home/vasy/Projects/nixos/modules/desktops/sway/config.nix"
+@/home/vasy/Projects/ansible-role-synapse/.yamllint
+|2,3,1509976856,,"/home/vasy/Projects/ansible-role-synapse/.yamllint"
+@/home/vasy/Projects/ansible-role-synapse/.gitignore
+|2,3,1509967765,,"/home/vasy/Projects/ansible-role-synapse/.gitignore"
+@/home/vasy/.vim/rc/fugitive.vim
+|2,3,1509966191,,"/home/vasy/.vim/rc/fugitive.vim"
 @/home/vasy/.vim/minisnip/
 |2,3,1509947965,,"/home/vasy/.vim/minisnip/"
 @/home/vasy/.vim/rc/search.vim
@@ -327,8 +445,6 @@ $
 |2,3,1509914248,,"/home/vasy/.vim/rc/autoload/commentary.vim"
 @/home/vasy/.vim/rc/completion.vimd
 |2,3,1509905525,,"/home/vasy/.vim/rc/completion.vimd"
-@/home/vasy/.vim/rc/statusline.vim
-|2,3,1509904184,,"/home/vasy/.vim/rc/statusline.vim"
 @/home/vasy/.vim/ftdetect/all.vim
 |2,3,1509903159,,"/home/vasy/.vim/ftdetect/all.vim"
 @/home/vasy/.vim/ftdetect/ansible.vim
@@ -356,326 +472,384 @@ $
 
 # Registers:
 "0	LINE	0
-	  call minpac#add('millermedeiros/vim-statline')
-|3,0,0,1,1,0,1509962341,"  call minpac#add('millermedeiros/vim-statline')"
-""1	LINE	0
-	let g:indentLine_loaded = 1
-|3,1,1,1,1,0,1509962536,"let g:indentLine_loaded = 1"
-"2	LINE	0
-	
-|3,0,2,1,1,0,1509962510,""
-"3	LINE	0
-	
-	let g:indentLine_loaded = 1
+	call s:source_rc('fugitive.vim')
+|3,0,0,1,1,0,1510034823,"call s:source_rc('fugitive.vim')"
+""1	BLOCK	0
+	 
+	 
+	 
+|3,1,1,2,3,0,1510034892," "," "," "
+"2	BLOCK	0
+	"
+	"
+	"
+|3,0,2,2,3,0,1510034890,"\"","\"","\""
+"3	BLOCK	0
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+|3,0,3,2,10,0,1510034883," "," "," "," "," "," "," "," "," "," "
+"4	BLOCK	0
+	"
+	"
+	"
+	"
+	"
+	"
+	"
+	"
+	"
+	"
+|3,0,4,2,10,0,1510034881,"\"","\"","\"","\"","\"","\"","\"","\"","\"","\""
+"5	LINE	0
+	let g:ansible_unindent_after_newline = 1
+	let g:minisnip_trigger = '<C-g>'
+|3,0,5,1,2,0,1510034802,"let g:ansible_unindent_after_newline = 1","let g:minisnip_trigger = '<C-g>'"
+"6	LINE	0
+	call s:source_rc('command.vim')
+|3,0,6,1,1,0,1510034735,"call s:source_rc('command.vim')"
+"7	LINE	0
+	set previewheight=20
+|3,0,7,1,1,0,1510031298,"set previewheight=20"
+"8	LINE	0
+	  
+|3,0,8,1,1,0,1510030913,"  "
+"9	LINE	0
 	let g:indentLine_char                = '┊'
 	let g:indentLine_leadingSpaceEnabled = 1
 	let g:indentLine_leadingSpaceChar    = '·'
-|3,0,3,1,5,0,1509962489,"","let g:indentLine_loaded = 1","let g:indentLine_char                = '┊'","let g:indentLine_leadingSpaceEnabled = 1","let g:indentLine_leadingSpaceChar    = '·'"
-"4	LINE	0
-	" show leading spaces
-	hi Conceal guibg=NONE ctermbg=NONE ctermfg=DarkGrey
-	autocmd vimrc BufWinEnter * setl conceallevel=2 concealcursor=nv
-	autocmd vimrc BufWinEnter * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
-	autocmd vimrc BufReadPre * setl conceallevel=2 concealcursor=nv
-	autocmd vimrc BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
-|3,0,4,1,6,0,1509962241,"\" show leading spaces","hi Conceal guibg=NONE ctermbg=NONE ctermfg=DarkGrey","autocmd vimrc BufWinEnter * setl conceallevel=2 concealcursor=nv","autocmd vimrc BufWinEnter * syn match LeadingSpace /\\(^ *\\)\\@<= / containedin=ALL conceal cchar=·","autocmd vimrc BufReadPre * setl conceallevel=2 concealcursor=nv","autocmd vimrc BufReadPre * syn match LeadingSpace /\\(^ *\\)\\@<= / containedin=ALL conceal cchar=·"
-"5	LINE	0
-	" conceal {{{
-	set conceallevel=2
-	set concealcursor=nv
-	" }}}
 	
-|3,0,5,1,5,0,1509962077,"\" conceal {{{","set conceallevel=2","set concealcursor=nv","\" }}}",""
-"6	LINE	0
-	"Invisible character colors
-	highlight NonText guifg=#4a4a59
-	highlight SpecialKey guifg=#4a4a59
-|3,0,6,1,3,0,1509962058,"\"Invisible character colors","highlight NonText guifg=#4a4a59","highlight SpecialKey guifg=#4a4a59"
-"7	LINE	0
-	set list
-|3,0,7,1,1,0,1509961966,"set list"
-"8	LINE	0
-	2match WhiteSpaceBol /^ \+/
-|3,0,8,1,1,0,1509961960,"2match WhiteSpaceBol /^ \\+/"
-"9	LINE	0
-	match WhiteSpaceMol / /
-|3,0,9,1,1,0,1509961959,"match WhiteSpaceMol / /"
+|3,0,9,1,4,0,1510030683,"let g:indentLine_char                = '┊'","let g:indentLine_leadingSpaceEnabled = 1","let g:indentLine_leadingSpaceChar    = '·'",""
 "-	CHAR	0
-	millermedeiros/vim-statline
-|3,0,36,0,1,0,1509962345,"millermedeiros/vim-statline"
+	fugitive
+|3,0,36,0,1,0,1510034827,"fugitive"
 
 # global variables:
 !FZF_DEFAULT_COMMAND	STR	rg --files --no-ignore --hidden --follow --glob "!.git/*"
 
 # File marks:
-'0  30  27  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,48,30,27,1509965754,"~/Projects/ansible-role-synapse/tasks/riot.yml"
-'1  32  0  ~/.vim/rc/fzf.vim
-|4,49,32,0,1509962599,"~/.vim/rc/fzf.vim"
-'2  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,50,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
-'3  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,51,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
-'4  2  0  ~/.vim/NERD_tree_1
-|4,52,2,0,1509962546,"~/.vim/NERD_tree_1"
-'5  13  0  ~/.vim/NERD_tree_1
-|4,53,13,0,1509962546,"~/.vim/NERD_tree_1"
-'6  3  0  ~/.vim/NERD_tree_1
-|4,54,3,0,1509962546,"~/.vim/NERD_tree_1"
-'7  14  0  ~/.vim/NERD_tree_1
-|4,55,14,0,1509962546,"~/.vim/NERD_tree_1"
-'8  3  0  ~/.vim/NERD_tree_1
-|4,56,3,0,1509962546,"~/.vim/NERD_tree_1"
-'9  14  0  ~/.vim/NERD_tree_1
-|4,57,14,0,1509962546,"~/.vim/NERD_tree_1"
+'0  1  0  ~/.vim/NERD_tree_1
+|4,48,1,0,1510034930,"~/.vim/NERD_tree_1"
+'1  41  2  ~/.vim/rc/plugins.vim
+|4,49,41,2,1510034904,"~/.vim/rc/plugins.vim"
+'2  34  0  ~/.vim/vimrc
+|4,50,34,0,1510032236,"~/.vim/vimrc"
+'3  34  0  ~/.vim/vimrc
+|4,51,34,0,1510032236,"~/.vim/vimrc"
+'4  1  0  ~/.vim/NERD_tree_1
+|4,52,1,0,1510032087,"~/.vim/NERD_tree_1"
+'5  1  0  ~/.vim/NERD_tree_1
+|4,53,1,0,1510032087,"~/.vim/NERD_tree_1"
+'6  26  0  ~/.vim/NERD_tree_1
+|4,54,26,0,1510032087,"~/.vim/NERD_tree_1"
+'7  1  0  ~/.vim/NERD_tree_1
+|4,55,1,0,1510032087,"~/.vim/NERD_tree_1"
+'8  1  0  ~/.vim/NERD_tree_1
+|4,56,1,0,1510032087,"~/.vim/NERD_tree_1"
+'9  1  0  ~/.vim/NERD_tree_1
+|4,57,1,0,1510032087,"~/.vim/NERD_tree_1"
 
 # Jumplist (newest first):
--'  30  27  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,30,27,1509965754,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  30  27  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,30,27,1509965754,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  30  27  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,30,27,1509965754,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  30  27  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,30,27,1509965754,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  1  0  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,1,0,1509964602,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  1  0  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,1,0,1509964602,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  1  0  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,1,0,1509964602,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  1  0  ~/Projects/ansible-role-synapse/tasks/riot.yml
-|4,39,1,0,1509964602,"~/Projects/ansible-role-synapse/tasks/riot.yml"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  32  0  ~/.vim/rc/fzf.vim
-|4,39,32,0,1509962599,"~/.vim/rc/fzf.vim"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962591,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  1  0  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,1,0,1509962576,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  13  19  ~/Projects/ansible-role-mysql/tasks/databases.yml
-|4,39,13,19,1509962567,"~/Projects/ansible-role-mysql/tasks/databases.yml"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  16  0  ~/.vim/rc/options.vim
-|4,39,16,0,1509962557,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  1  0  ~/.vim/rc/options.vim
-|4,39,1,0,1509962554,"~/.vim/rc/options.vim"
--'  2  0  ~/.vim/NERD_tree_1
-|4,39,2,0,1509962546,"~/.vim/NERD_tree_1"
--'  13  0  ~/.vim/NERD_tree_1
-|4,39,13,0,1509962546,"~/.vim/NERD_tree_1"
--'  3  0  ~/.vim/NERD_tree_1
-|4,39,3,0,1509962546,"~/.vim/NERD_tree_1"
--'  14  0  ~/.vim/NERD_tree_1
-|4,39,14,0,1509962546,"~/.vim/NERD_tree_1"
--'  3  0  ~/.vim/NERD_tree_1
-|4,39,3,0,1509962546,"~/.vim/NERD_tree_1"
--'  14  0  ~/.vim/NERD_tree_1
-|4,39,14,0,1509962546,"~/.vim/NERD_tree_1"
--'  4  0  ~/.vim/NERD_tree_1
-|4,39,4,0,1509962546,"~/.vim/NERD_tree_1"
--'  15  0  ~/.vim/NERD_tree_1
-|4,39,15,0,1509962546,"~/.vim/NERD_tree_1"
--'  15  0  ~/.vim/NERD_tree_1
-|4,39,15,0,1509962546,"~/.vim/NERD_tree_1"
--'  4  0  ~/.vim/NERD_tree_1
-|4,39,4,0,1509962546,"~/.vim/NERD_tree_1"
--'  15  0  ~/.vim/NERD_tree_1
-|4,39,15,0,1509962546,"~/.vim/NERD_tree_1"
--'  15  0  ~/.vim/NERD_tree_1
-|4,39,15,0,1509962546,"~/.vim/NERD_tree_1"
--'  8  2  ~/.vim/NERD_tree_1
-|4,39,8,2,1509962537,"~/.vim/NERD_tree_1"
 -'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  19  2  ~/.vim/NERD_tree_1
-|4,39,19,2,1509962537,"~/.vim/NERD_tree_1"
--'  9  2  ~/.vim/NERD_tree_1
-|4,39,9,2,1509962537,"~/.vim/NERD_tree_1"
--'  20  2  ~/.vim/NERD_tree_1
-|4,39,20,2,1509962537,"~/.vim/NERD_tree_1"
--'  9  2  ~/.vim/NERD_tree_1
-|4,39,9,2,1509962537,"~/.vim/NERD_tree_1"
+|4,39,1,0,1510034930,"~/.vim/NERD_tree_1"
+-'  12  2  ~/.vim/NERD_tree_1
+|4,39,12,2,1510034908,"~/.vim/NERD_tree_1"
+-'  41  2  ~/.vim/rc/plugins.vim
+|4,39,41,2,1510034904,"~/.vim/rc/plugins.vim"
+-'  41  2  ~/.vim/rc/plugins.vim
+|4,39,41,2,1510034904,"~/.vim/rc/plugins.vim"
+-'  46  24  ~/.vim/vimrc
+|4,39,46,24,1510034860,"~/.vim/vimrc"
+-'  46  24  ~/.vim/vimrc
+|4,39,46,24,1510034860,"~/.vim/vimrc"
+-'  1  0  ~/.vim/vimrc
+|4,39,1,0,1510034819,"~/.vim/vimrc"
+-'  1  0  ~/.vim/vimrc
+|4,39,1,0,1510034819,"~/.vim/vimrc"
+-'  1  0  ~/.vim/rc/ansible.vim
+|4,39,1,0,1510034817,"~/.vim/rc/ansible.vim"
+-'  1  0  ~/.vim/rc/ansible.vim
+|4,39,1,0,1510034817,"~/.vim/rc/ansible.vim"
+-'  3  0  ~/.vim/ftdetect/all.vim
+|4,39,3,0,1510034804,"~/.vim/ftdetect/all.vim"
+-'  3  0  ~/.vim/ftdetect/all.vim
+|4,39,3,0,1510034804,"~/.vim/ftdetect/all.vim"
+-'  3  0  ~/.vim/rc/ansible.vim
+|4,39,3,0,1510034797,"~/.vim/rc/ansible.vim"
+-'  3  0  ~/.vim/rc/ansible.vim
+|4,39,3,0,1510034797,"~/.vim/rc/ansible.vim"
+-'  1  78  ~/.vim/ftdetect/all.vim
+|4,39,1,78,1510034787,"~/.vim/ftdetect/all.vim"
+-'  1  78  ~/.vim/ftdetect/all.vim
+|4,39,1,78,1510034787,"~/.vim/ftdetect/all.vim"
+-'  18  0  ~/.vim/rc/autoload/ondemand.vim
+|4,39,18,0,1510034765,"~/.vim/rc/autoload/ondemand.vim"
+-'  18  0  ~/.vim/rc/autoload/ondemand.vim
+|4,39,18,0,1510034765,"~/.vim/rc/autoload/ondemand.vim"
+-'  34  0  ~/.vim/vimrc
+|4,39,34,0,1510032236,"~/.vim/vimrc"
+-'  34  0  ~/.vim/vimrc
+|4,39,34,0,1510032236,"~/.vim/vimrc"
+-'  34  0  ~/.vim/vimrc
+|4,39,34,0,1510032236,"~/.vim/vimrc"
+-'  34  0  ~/.vim/vimrc
+|4,39,34,0,1510032236,"~/.vim/vimrc"
+-'  1  0  ~/.vim/vimrc
+|4,39,1,0,1510032175,"~/.vim/vimrc"
+-'  1  0  ~/.vim/vimrc
+|4,39,1,0,1510032175,"~/.vim/vimrc"
+-'  26  0  ~/.vim/NERD_tree_1
+|4,39,26,0,1510032087,"~/.vim/NERD_tree_1"
 -'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  20  2  ~/.vim/NERD_tree_1
-|4,39,20,2,1509962537,"~/.vim/NERD_tree_1"
--'  10  2  ~/.vim/NERD_tree_1
-|4,39,10,2,1509962537,"~/.vim/NERD_tree_1"
+|4,39,1,0,1510032087,"~/.vim/NERD_tree_1"
 -'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  21  2  ~/.vim/NERD_tree_1
-|4,39,21,2,1509962537,"~/.vim/NERD_tree_1"
+|4,39,1,0,1510032087,"~/.vim/NERD_tree_1"
+-'  27  0  ~/.vim/NERD_tree_1
+|4,39,27,0,1510032087,"~/.vim/NERD_tree_1"
 -'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  21  2  ~/.vim/NERD_tree_1
-|4,39,21,2,1509962537,"~/.vim/NERD_tree_1"
--'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  10  2  ~/.vim/NERD_tree_1
-|4,39,10,2,1509962537,"~/.vim/NERD_tree_1"
--'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  21  2  ~/.vim/NERD_tree_1
-|4,39,21,2,1509962537,"~/.vim/NERD_tree_1"
--'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  21  2  ~/.vim/NERD_tree_1
-|4,39,21,2,1509962537,"~/.vim/NERD_tree_1"
--'  1  0  ~/.vim/NERD_tree_1
-|4,39,1,0,1509962537,"~/.vim/NERD_tree_1"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
--'  1  0  ~/.vim/rc/fzf.vim
-|4,39,1,0,1509962520,"~/.vim/rc/fzf.vim"
+|4,39,1,0,1510032075,"~/.vim/NERD_tree_1"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  1  0  ~/.vim/rc/fugitive.vim
+|4,39,1,0,1510031412,"~/.vim/rc/fugitive.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  36  1  ~/.vim/rc/plugins.vim
+|4,39,36,1,1510031408,"~/.vim/rc/plugins.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  75  0  ~/.vim/rc/options.vim
+|4,39,75,0,1510031370,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/.vim/rc/options.vim
+|4,39,1,0,1510031238,"~/.vim/rc/options.vim"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
+-'  1  0  ~/Projects/nixos/modules/development/upwork.nix
+|4,39,1,0,1510031167,"~/Projects/nixos/modules/development/upwork.nix"
 
 # History of marks within files (newest to oldest):
 
-> ~/.vim/.git/index
-	*	1509965843	0
-	"	20	31
-
 > ~/.vim/NERD_tree_1
-	*	1509965823	0
+	*	1510034927	0
 	"	1	0
 	.	1	0
 	+	1	0
 
-> ~/Projects/ansible-role-synapse/tasks/riot.yml
-	*	1509965536	0
-	"	30	27
-
-> ~/Projects/ansible-role-synapse/.git/index
-	*	1509964688	0
-	"	1	0
-
-> ~/Projects/ansible-role-synapse/NERD_tree_1
-	*	1509964601	0
-	"	10	0
-	.	1	0
-	+	1	0
-
-> ~/Projects/ansible-role-mysql/tasks/databases.yml
-	*	1509962579	0
-	"	13	19
-
-> ~/Projects/ansible-role-mysql/NERD_tree_1
-	*	1509962576	0
-	"	7	0
-	.	1	0
-	+	1	0
-
-> ~/.vim/rc/fzf.vim
-	*	1509962559	0
-	"	32	0
-	.	14	0
+> ~/.vim/rc/plugins.vim
+	*	1510034902	0
+	"	41	2
+	^	25	34
+	.	48	2
+	+	14	19
+	+	57	39
 	+	14	0
+	+	12	0
+	+	14	0
+	+	13	37
+	+	25	19
+	+	26	0
+	+	25	19
+	+	25	34
+	+	25	33
+	+	13	0
+	+	50	0
+	+	36	2
+	+	48	2
+
+> ~/.vim/vimrc
+	*	1510034852	0
+	"	46	24
+	^	46	25
+	.	46	24
+	+	39	0
+	+	45	25
+	+	38	27
+	+	35	26
+	+	35	0
+	+	39	0
+	+	41	0
+	+	45	0
+	+	33	0
+	+	34	0
+	+	36	0
+	+	46	24
+
+> ~/.vim/rc/ansible.vim
+	*	1510034811	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/ftdetect/all.vim
+	*	1510034803	0
+	"	3	0
+	^	1	79
+	.	3	0
+	+	3	0
+	+	8	0
+	+	3	0
+
+> ~/.vim/rc/autoload/ondemand.vim
+	*	1510034759	0
+	"	18	0
+	^	39	10
+	.	19	0
+	+	40	0
+	+	40	10
+	+	40	2
+	+	40	0
+	+	39	0
+	+	19	0
+
+> ~/.vim/rc/autocmd.vim
+	*	1510031994	0
+	"	25	0
+	.	9	0
+	+	9	32
+	+	9	0
+
+> ~/.vim/rc/fugitive.vim
+	*	1510031491	0
+	"	4	0
+	.	1	0
+	+	1	0
+	+	2	0
+	+	1	0
 
 > ~/.vim/rc/options.vim
-	*	1509962554	0
-	"	16	0
-	^	19	0
-	.	16	0
+	*	1510031348	0
+	"	75	0
+	^	12	0
+	.	32	0
 	+	8	31
 	+	10	0
 	+	8	31
@@ -690,55 +864,416 @@ $
 	+	9	0
 	+	10	0
 	+	11	0
-	+	38	0
-	+	11	0
-	+	12	9
-	+	13	18
-	+	14	19
-	+	11	0
-	+	16	0
-	+	19	0
-	+	16	0
-
-> ~/.vim/ftdetect/all.vim
-	*	1509962490	0
-	"	11	0
-	.	12	0
-	+	4	0
-	+	10	0
-	+	11	0
-	+	12	0
-
-> ~/.vim/rc/plugins.vim
-	*	1509962404	0
-	"	13	37
-	^	13	38
-	.	13	37
-	+	14	19
-	+	56	39
-	+	14	0
-	+	12	0
-	+	14	0
-	+	13	37
-
-> ~/.vim/rc/autocmd.vim
-	*	1509961105	0
-	"	9	0
-	.	9	0
-	+	9	32
-	+	9	0
-
-> ~/.vim/rc/autoload/ondemand.vim
-	*	1509960906	0
-	"	19	0
-	^	39	10
-	.	19	0
 	+	40	0
-	+	40	10
+	+	11	0
+	+	20	9
+	+	21	18
+	+	22	19
+	+	11	0
+	+	24	0
+	+	32	0
+	+	24	11
+	+	40	5
+	+	45	7
+	+	53	5
+	+	56	7
+	+	63	5
+	+	71	8
+	+	78	5
+	+	86	5
+	+	113	17
+	+	7	11
+	+	38	24
+	+	52	0
+	+	55	0
+	+	77	0
+	+	112	0
+	+	12	0
+	+	19	0
+	+	14	0
+	+	18	8
+	+	24	0
+	+	32	0
+
+> ~/Projects/nixos/modules/development/upwork.nix
+	*	1510031165	0
+	"	1	0
+	^	1	1
+	.	1	0
+	+	1	0
+	+	70	0
+	+	75	0
+	+	1	0
+
+> ~/Projects/nixos/NERD_tree_1
+	*	1510030779	0
+	"	15	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/rc/statusline.vim
+	*	1510030629	0
+	"	3	0
+	.	1	0
+	+	3	0
+	+	4	0
+	+	3	0
+	+	55	0
+	+	82	0
+	+	1	0
+
+> ~/.vim/rc/theme.vim
+	*	1510030461	0
+	"	13	9
+	^	19	0
+	.	19	0
+	+	20	14
+	+	17	18
+	+	20	16
+	+	20	0
+	+	18	0
+	+	19	0
+
+> ~/.vim/rc/align.vim
+	*	1510030397	0
+	"	1	0
+
+> ~/Projects/nixos/modules/desktops/gnome.nix
+	*	1510028001	0
+	"	19	0
+	^	34	32
+	.	36	0
+	+	34	31
+	+	35	0
+	+	25	0
+	+	26	0
+	+	37	0
+	+	36	0
+
+> ~/Projects/nixos/modules/desktops/_sway.nix
+	*	1510027959	0
+	"	1	0
+
+> ~/Projects/nixos/modules/development/lxd/lxd.nix
+	*	1510027928	0
+	"	30	1
+
+> ~/Projects/nixos/modules/development/lxd/lxd-deps.nix
+	*	1510027819	0
+	"	1	0
+
+> ~/Projects/nixos/modules/development/hypernix.nix
+	*	1510027812	0
+	"	1	0
+
+> ~/Projects/nixos/modules/development/gitkraken.nix
+	*	1510027810	0
+	"	1	0
+	^	75	0
+	.	75	0
+	+	13	0
+	+	18	8
+	+	79	8
+	+	74	114
+	+	20	0
+	+	57	0
+	+	73	0
+	+	75	0
+
+> ~/Projects/nixos/modules/development/vagrant.nix
+	*	1510027694	0
+	"	1	0
+
+> ~/Projects/nixos/modules/development/vim.nix
+	*	1510027693	0
+	"	1	0
+
+> ~/Projects/nixos/profiles/plumelo.nix
+	*	1510027692	0
+	"	31	4
+	.	31	22
+	+	63	0
+	+	10	4
+	+	11	26
+	+	12	4
+	+	9	0
+	+	10	0
+	+	12	0
+	+	31	22
+
+> ~/Projects/nixos/profiles/plumfive.nix
+	*	1510027691	0
+	"	1	0
+
+> ~/Projects/nixos/modules/development/tilix.nix
+	*	1510027347	0
+	"	1	0
+	.	12	0
+	+	12	0
+
+> ~/Projects/nixos/modules/desktops/sway/sway.nix
+	*	1510026823	0
+	"	14	16
+	.	2	0
+	+	2	0
+
+> ~/Projects/nixos/modules/desktops/sway/wlc.nix
+	*	1510026664	0
+	"	1	0
+	.	37	0
+	+	37	0
+
+> ~/Projects/nixos/modules/desktops/sway/index.nix
+	*	1510026623	0
+	"	1	0
+	.	10	0
+	+	10	0
+
+> ~/Projects/nixos/modules/desktops/sway/brightnessctl.nix
+	*	1510026531	0
+	"	1	0
+	.	2	0
+	+	2	0
+
+> ~/Projects/nixos/modules/desktops/sway/alacritty.nix
+	*	1510026470	0
+	"	1	0
+	.	14	0
+	+	14	0
+
+> ~/Projects/nixos/modules/desktops/sway/config.nix
+	*	1510026407	0
+	"	1	0
+	.	12	0
+	+	12	0
+
+> ~/Projects/nixos/devices/yoga2-pro.nix
+	*	1510025761	0
+	"	30	0
+
+> ~/Projects/ansible-role-synapse/templates/homeserver.conf.j2
+	*	1509987777	0
+	"	97	21
+
+> ~/Projects/ansible-role-synapse/defaults/main.yml
+	*	1509987694	0
+	"	31	57
+	^	25	15
+	.	25	14
+	+	28	0
+	+	26	11
+	+	27	0
+	+	28	0
+	+	27	0
+	+	26	15
+	+	27	23
+	+	28	23
+	+	23	0
+	+	29	0
+	+	25	0
+	+	27	22
+	+	28	24
+	+	27	23
+	+	28	25
+	+	25	33
+	+	26	13
+	+	25	14
+
+> ~/Projects/ansible-role-synapse/tasks/riot.yml
+	*	1509986613	0
+	"	1	0
+	.	40	0
+	+	12	33
+	+	19	0
+	+	39	1
+	+	39	0
+	+	12	0
+	+	40	0
+	+	32	0
+	+	40	0
+	+	18	0
 	+	40	2
 	+	40	0
-	+	39	0
-	+	19	0
+
+> ~/Projects/ansible-role-synapse/templates/config.json.j2
+	*	1509986601	0
+	"	1	0
+	^	11	57
+	.	15	0
+	+	11	32
+	+	15	0
+	+	8	53
+	+	11	56
+	+	15	0
+
+> ~/Projects/ansible-role-synapse/NERD_tree_1
+	*	1509985260	0
+	"	4	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/colors/kolor.vim
+	*	1509981480	0
+	"	54	34
+
+> ~/Projects/ansible-role-synapse/tasks/nginx.yml
+	*	1509978295	0
+	"	7	10
+
+> ~/Projects/ansible-role-synapse/tasks/synapse.yml
+	*	1509977973	0
+	"	4	52
+
+> ~/Projects/ansible-role-synapse/tasks/main.yml
+	*	1509977895	0
+	"	12	28
+
+> ~/Projects/ansible-role-synapse/tasks/postgresql.yml
+	*	1509977886	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/tasks/users.yml
+	*	1509977883	0
+	"	12	20
+
+> ~/Projects/ansible-role-synapse/.yamllint
+	*	1509976862	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Projects/ansible-role-nginx_src/.yamllint
+	*	1509976838	0
+	"	50	0
+
+> ~/.vim/rc/fzf.vim
+	*	1509976270	0
+	"	32	0
+	.	14	0
+	+	14	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//4cf640ad33a68541388e95dae80b72acd542cb5a
+	*	1509971977	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/gitv-4
+	*	1509971975	0
+	"	1	0
+	.	1	0
+	+	18	0
+	+	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//4b1c7742259c3fe8295fa9c745357bf9ff8666c2/
+	*	1509971961	0
+	"	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//4b1c7742259c3fe8295fa9c745357bf9ff8666c2
+	*	1509971961	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/tests/test.yml
+	*	1509971001	0
+	"	15	21
+
+> ~/Projects/ansible-role-synapse/tests/Vagrantfile
+	*	1509970956	0
+	"	11	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//dd65c0c47dfd3522fb3a170fa70f5a67b982bce7
+	*	1509970232	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/.git/index
+	*	1509970215	0
+	"	2	0
+
+> ~/Projects/ansible-role-synapse/NERD_tree_5
+	*	1509969089	0
+	"	8	0
+	.	1	0
+	+	1	0
+
+> ~/Projects/ansible-role-synapse/NERD_tree_4
+	*	1509969082	0
+	"	5	0
+	.	1	0
+	+	1	0
+
+> ~/Projects/ansible-role-synapse/tests/galaxy.yml
+	*	1509969078	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/NERD_tree_3
+	*	1509969073	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Projects/ansible-role-synapse/NERD_tree_2
+	*	1509969072	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//a7c6832e7bfdada2ab75fe1fc72cfed23c637f84
+	*	1509968915	0
+	"	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//85d4e51ed41b77861281dca4ae7efd8fbe1bf920
+	*	1509968909	0
+	"	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//08b08cccb71ecee5151df2a122a2bc83b6fed8d6
+	*	1509968906	0
+	"	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//c912ae4db10165b0961c703a5100897b719eb20a
+	*	1509968903	0
+	"	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//913ec5dcda2ced0d2a568b38d7a5cfc466e6cf15
+	*	1509968894	0
+	"	1	0
+
+> fugitive:///home/vasy/Projects/ansible-role-synapse/.git//c912ae4db10165b0961c703a5100897b719eb20a/
+	*	1509968884	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/.gitignore
+	*	1509968011	0
+	"	2	4
+	^	2	5
+	.	2	4
+	+	4	0
+	+	1	0
+	+	3	4
+	+	2	4
+
+> ~/Projects/ansible-role-nginx_src/.gitignore
+	*	1509967775	0
+	"	2	0
+
+> ~/Projects/ansible-role-synapse/vars/main.yml
+	*	1509967623	0
+	"	1	0
+
+> ~/Projects/ansible-role-synapse/handlers/main.yml
+	*	1509967571	0
+	"	9	34
+
+> ~/.vim/.git/index
+	*	1509966428	0
+	"	1	0
+
+> ~/Projects/ansible-role-mysql/tasks/databases.yml
+	*	1509962579	0
+	"	13	19
+
+> ~/Projects/ansible-role-mysql/NERD_tree_1
+	*	1509962576	0
+	"	7	0
+	.	1	0
+	+	1	0
 
 > ~/Projects/ansible-role-mysql/tasks/percona.yml
 	*	1509959386	0
@@ -776,15 +1311,6 @@ $
 	*	1509959382	0
 	"	1	0
 
-> ~/.vim/rc/theme.vim
-	*	1509959302	0
-	"	18	14
-	^	18	15
-	.	18	14
-	+	18	14
-	+	17	18
-	+	18	14
-
 > ~/Projects/ansible-role-mysql/tasks/install.yml
 	*	1509959259	0
 	"	35	33
@@ -797,22 +1323,6 @@ $
 	+	35	36
 	+	35	48
 	+	35	33
-
-> ~/.vim/vimrc
-	*	1509958709	0
-	"	39	0
-	.	39	0
-	+	39	0
-
-> ~/.vim/rc/statusline.vim
-	*	1509958266	0
-	"	79	0
-	.	80	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	53	0
-	+	80	0
 
 > ~/.vim/rc/search.vim
 	*	1509958065	0

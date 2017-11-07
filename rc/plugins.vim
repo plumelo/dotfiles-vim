@@ -10,7 +10,7 @@ if exists('*minpac#init')
   call minpac#add('k-takata/minpac', {'type': 'opt'})
  " theme
   call minpac#add('millermedeiros/vim-statline')
-  call minpac#add('Yggdroot/indentLine')
+  " call minpac#add('Yggdroot/indentLine')
 
   " files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
@@ -22,6 +22,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
   call minpac#add('Xuyuanp/nerdtree-git-plugin')
+  call minpac#add('gregsexton/gitv')
 
   " syntax
   call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
@@ -43,7 +44,7 @@ if exists('*minpac#init')
   call minpac#add('junegunn/vim-easy-align')
   call minpac#add('zhamlin/tiler.vim', {'type': 'opt'})
 
-  " completion
+  " " completion
   call minpac#add('dirkwallenstein/vim-autocomplpop', {'type': 'opt'})
   call minpac#add('KeyboardFire/vim-minisnip', {'type': 'opt'})
   call minpac#add('vim-scripts/L9')
