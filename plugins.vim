@@ -1,6 +1,3 @@
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-
 if empty(glob('~/.vim/pack/minpac/opt/'))
   silent !git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 endif
@@ -15,14 +12,15 @@ if exists('*minpac#init')
   " files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
   call minpac#add('francoiscabrol/ranger.vim', {'type': 'opt'})
-  call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
-  call minpac#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
+  call minpac#add('vifm/vifm.vim')
+  call minpac#add('lpenz/vimcommander')
 
   " git
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
   call minpac#add('Xuyuanp/nerdtree-git-plugin')
   call minpac#add('gregsexton/gitv')
+  call minpac#add('iberianpig/tig-explorer.vim')
 
   " syntax
   call minpac#add('pearofducks/ansible-vim', {'type': 'opt'})
@@ -39,10 +37,10 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-surround')
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-repeat')
-  call minpac#add('rhysd/clever-f.vim', {'type': 'opt'})
+"  call minpac#add('rhysd/clever-f.vim', {'type': 'opt'})
   call minpac#add('kana/vim-niceblock')
   call minpac#add('junegunn/vim-easy-align')
-  call minpac#add('zhamlin/tiler.vim', {'type': 'opt'})
+"  call minpac#add('zhamlin/tiler.vim', {'type': 'opt'})
 
   " " completion
   call minpac#add('dirkwallenstein/vim-autocomplpop', {'type': 'opt'})
@@ -58,7 +56,16 @@ if exists('*minpac#init')
 
 endif
 
+com! PackClean     packadd minpac | source $MYVIMRC | call minpac#clean()
+com! PackUpdate    packadd minpac | source $MYVIMRC | call minpac#clean() | call minpac#update()
+com! PackListStart packadd minpac | source $MYVIMRC | Capture echo minpac#getpackages("", "start")
+com! PackListOpt   packadd minpac | source $MYVIMRC | Capture echo minpac#getpackages("", "opt")
+com! PackNameStart packadd minpac | source $MYVIMRC | Capture echo minpac#getpackages("", "start", "", 1)
+com! PackNameOpt   packadd minpac | source $MYVIMRC | Capture echo minpac#getpackages("", "opt", "", 1)
+
 if !has('vim_starting')
   syntax enable
   filetype plugin indent on
 endif
+
+runtime macros/matchit.vim

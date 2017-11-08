@@ -1,6 +1,6 @@
 set t_Co=256
 
-if !has('nvim')
+if !has('vim')
   set term=xterm-256color
 
   " Change cursor shape.
@@ -14,7 +14,4 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-set background=dark
-let g:kolor_italic=1
-let g:kolor_inverted_matchparen=1
-colorscheme kolor
+colorscheme apprentice

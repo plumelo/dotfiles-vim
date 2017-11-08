@@ -1,5 +1,9 @@
 function! ondemand#nerdtree()
   packadd nerdtree
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeChDirMode = 1
+  let g:NERDTreeMinimalUI = 1
+  let g:NERDTreeMouseMode = 3
 endfunction
 
 function! ondemand#fzf()
@@ -36,4 +40,5 @@ endfunction
 
 function! ondemand#minisnip()
   packadd vim-minisnip
+  let g:minisnip_trigger = '<C-g>'
 endfunction
