@@ -79,4 +79,4 @@ nmap <BS> :b<Space><C-z>
 nmap <C-f> :Ags<CR>
 nmap <C-g> :Ags<Space>
 
-map ,f :<C-u>call ondemand#DmenuOpen("e")<cr>
+" map ,f :<C-u>call ondemand#DmenuOpen("e")<cr>
