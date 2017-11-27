@@ -29,7 +29,7 @@ xnoremap < <gv
 
 " quick save, quit and undo
 nnoremap <silent> <c-s> :<C-u>update<CR>
-nnoremap <silent> <c-q> :<C-u>bd<CR>
+nnoremap <silent> <c-q> :<C-u>bw<CR>
 inoremap <silent> <c-s> <Esc>:<C-u>update<CR>
 xnoremap <silent> <c-s> <Esc>:<C-u>update<CR>
 imap <silent> <c-z> <c-o>u
