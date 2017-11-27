@@ -42,7 +42,6 @@ if exists('*minpac#init')
   call minpac#add('itchyny/vim-parenmatch')
   call minpac#add('bronson/vim-visual-star-search')
   call minpac#add('editorconfig/editorconfig-vim')
-  call minpac#add('ddrscott/vim-side-search')
 
   " " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
@@ -53,7 +52,6 @@ if exists('*minpac#init')
 
   " search
   call minpac#add('gabesoft/vim-ags')
-  " call minpac#add('ggreer/the_silver_searcher')
 
 endif
 
