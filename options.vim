@@ -11,26 +11,28 @@ set concealcursor=nv
 
 " completion
 set completeopt&
-set completeopt+=preview
+set completeopt=preview
 " set completeopt+=longest
-set completeopt+=menuone
-set completeopt+=noinsert
-set completeopt+=noselect
+set completeopt=menuone
+set completeopt=noinsert
+set completeopt=noselect
+set omnifunc=syntaxcomplete#Complete
 
 set infercase "Ignore case on insert completion
 set showfulltag "Show rich info for ins-completion
 
 set wildmenu " Command line autocompletion
-set wildmode=longest,full
+set wildmode=full
 
 set nofoldenable "Disable fold
 set splitbelow " sohw preview window at bottom
 
 " indent
 set expandtab
-set shiftround
+set tabstop=2
+set softtabstop=2
 set shiftwidth=2
-let &softtabstop = &tabstop
+set shiftround
 
 " lang
 set spelllang=en "Spell checking language
@@ -66,12 +68,17 @@ set virtualedit=block "Cursor can be positioned virtually when Visual-block mode
 set whichwrap=b,s,h,l,[,],<,> "Allow specified keys to move to the previous/next line
 set wrap "Lines longer than the width of the window will wrap
 set wrapscan "Searches wrap around the end of the file
-" set timeoutlen=1000
-" set ttimeoutlen=-1
+set timeoutlen=1000
+set ttimeoutlen=50
+set lazyredraw
+
+set mouse=a
+set number
 
 if has('unnamedplus')
   set clipboard^=unnamedplus
+    else
+  set clipboard^=unnamed
 endif
 
-set formatoptions+=nmB formatoptions-=t formatoptions-=c
 set wildcharm=<C-z>

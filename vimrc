@@ -18,11 +18,6 @@ if has('vim_starting')
   \ | echomsg 'startuptime: ' . reltimestr(g:startuptime)
 endif
 
-
-
-
-
-
 source ~/.vim/plugins.vim
 source ~/.vim/theme.vim
 source ~/.vim/statusline.vim
@@ -31,4 +26,5 @@ source ~/.vim/mappings.vim
 source ~/.vim/autocmd.vim
 
 source ~/.vim/nerdtree.vim
+source ~/.vim/dmenu.vim
 source ~/.vim/fugitive.vim

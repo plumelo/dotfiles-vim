@@ -64,3 +64,35 @@ vnoremap . :normal .<CR>
 
 " numbers
 noremap ,n :set invnumber<CR>
+
+" matchparen
+let g:loaded_matchparen = 1
+
+" completion
+let g:minisnip_trigger = '<C-Space>'
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" search side
+let g:side_search_prg = 'ag --word-regexp'
+  \. " --ignore='*.js.map'"
+  \. " --heading --stats -B 1 -A 4"
+
+" Can use `vnew` or `new`
+let g:side_search_splitter = 'vnew'
+
+" I like 40% splits, change it if you don't
+let g:side_search_split_pct = 0.4
+
+" SideSearch current word and return to original window
+nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p
+
+" Create an shorter `SS` command
+command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
+
+" or command abbreviation
+cabbrev SS SideSearch
+
+" buffers
+nmap <BS> :b<Space><C-z>

@@ -6,12 +6,18 @@ function! ondemand#nerdtree()
   let g:NERDTreeMouseMode = 3
 endfunction
 
-function! ondemand#fzf()
-  packadd fzf.vim
-endfunction
-
 function! ondemand#completion()
-  packadd vim-autocomplpop
+  packadd neocomplete.vim
+  NeoCompleteEnable
+  let g:acp_enableAtStartup = 0
+  let g:neocomplete#enable_at_startup = 0
+  let g:neocomplete#enable_smart_case = 1
+  let g:neocomplete#sources#syntax#min_keyword_length = 3
+  let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+  inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+  inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endfunction
 
 function! ondemand#linting()
@@ -22,6 +28,11 @@ endfunction
 
 function! ondemand#gitgutter()
   packadd vim-gitgutter
+endfunction
+
+
+function! ondemand#sign()
+  packadd vim-sign-deferred
 endfunction
 
 function! ondemand#lessspace()

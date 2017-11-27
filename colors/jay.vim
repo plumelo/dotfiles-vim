@@ -39,7 +39,7 @@ let s:back3 = ['#444444', 238]
 let s:back4 = ['#606060', 241]
 " Foreground Colors
 let s:fore0 = ['#e4e4e4', 254]
-let s:fore = ['#dadada', 253]
+let s:fore = ['#bcbcbc', 253]
 let s:fore2 = ['#bcbcbc', 250]
 let s:fore3 = ['#9e9e9e', 247]
 let s:fore4 = ['#808080', 244]

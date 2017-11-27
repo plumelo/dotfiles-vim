@@ -6,7 +6,6 @@ autocmd vimrc QuickFixCmdPost    l* lwindow
 autocmd vimrc VimEnter            * cwindow
 " Git-specific settings
 autocmd vimrc FileType gitcommit nnoremap <buffer> { ?^@@<CR>|nnoremap <buffer> } /^@@<CR>|setlocal iskeyword+=-
-augroup END
 
 " commands for adjusting indentation rules manually
 command! -nargs=1 Spaces execute "setlocal tabstop=" . <args> . " shiftwidth=" . <args> . " softtabstop=" . <args> . " expandtab" | setlocal ts? sw? sts? et?
@@ -24,7 +23,7 @@ autocmd vimrc BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe
 autocmd vimrc InsertEnter * call ondemand#completion()
 
 " git gutter
-autocmd vimrc BufWinEnter * call ondemand#gitgutter()
+autocmd vimrc BufWinEnter * call ondemand#sign()
 
 " lessspace
 autocmd vimrc InsertLeave,InsertChange * call ondemand#lessspace()
