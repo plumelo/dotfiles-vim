@@ -42,7 +42,6 @@ if exists('*minpac#init')
   call minpac#add('itchyny/vim-parenmatch')
   call minpac#add('bronson/vim-visual-star-search')
   call minpac#add('editorconfig/editorconfig-vim')
-  call minpac#add('rliang/asyncpack.vim')
 
   " " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
