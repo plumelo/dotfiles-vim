@@ -6,7 +6,7 @@
 
 * for ansible development
 
-'''vim
+```vim
 '-' open nerdtree
 Ctrl-f search word under cursor
 Ctrl-g enter pattern
@@ -21,4 +21,4 @@ with Enter open it.
 leader is the default leader '\'
 
 <leader>f open Ranger explorer
-'''
+```
