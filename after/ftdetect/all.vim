@@ -18,3 +18,6 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " editorconfig
 let g:EditorConfig_core_mode = 'python_builtin'
 
+" matchparen
+let g:loaded_matchparen = 1
+

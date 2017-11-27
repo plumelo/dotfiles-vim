@@ -65,9 +65,6 @@ vnoremap . :normal .<CR>
 " numbers
 noremap ,n :set invnumber<CR>
 
-" matchparen
-let g:loaded_matchparen = 1
-
 " completion
 let g:minisnip_trigger = '<C-Space>'
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
