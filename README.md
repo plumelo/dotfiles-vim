@@ -21,3 +21,4 @@ with Enter open it.
 leader is the default leader '\'
 
 <leader>f open Ranger explorer
+'''
