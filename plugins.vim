@@ -42,6 +42,7 @@ if exists('*minpac#init')
   call minpac#add('itchyny/vim-parenmatch')
   call minpac#add('bronson/vim-visual-star-search')
   call minpac#add('editorconfig/editorconfig-vim')
+  call minpac#add('Yggdroot/indentLine')
 
   " " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
@@ -62,5 +63,3 @@ if !has('vim_starting')
   syntax enable
   filetype plugin indent on
 endif
-
-runtime macros/matchit.vim
