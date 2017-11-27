@@ -26,5 +26,5 @@ source ~/.vim/mappings.vim
 source ~/.vim/autocmd.vim
 
 source ~/.vim/nerdtree.vim
-source ~/.vim/dmenu.vim
+" source ~/.vim/dmenu.vim
 source ~/.vim/fugitive.vim

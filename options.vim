@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 " visibility
-set listchars=tab:▸\ ,trail:.
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:␣,trail:·,eol:↲
 set list
 set showbreak=\\
 
@@ -51,8 +51,8 @@ set nobackup
 set autoread "Automatically read file again which has been changed outside of Vim
 set backspace=indent,eol,start "Working of <BS>,<Del>,CTRL-W,CTRL-U
 set display=lastline "Display as much as possible of the last line
-set grepprg=rg\ --vimgrep "Program to use for the :grep command
-let g:grep_cmd_opts = '--line-numbers --noheading'
+" set grepprg=rg\ --vimgrep"Program to use for the :grep command
+" let g:grep_cmd_opts = '--line-numbers --noheading'
 set hidden "Display another buffer when current buffer isn't saved.
 set history=1024 "Amount of Command history
 set keywordprg=:help "Open Vim internal help by K command

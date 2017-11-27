@@ -14,5 +14,6 @@ endif
 "   set termguicolors
 " endif
 
-set background=dark
-colorscheme space-vim-dark
+" set background=dark
+" colorscheme space-vim-dark
+colorscheme apprentice

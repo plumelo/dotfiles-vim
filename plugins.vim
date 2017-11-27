@@ -25,7 +25,6 @@ if exists('*minpac#init')
   " syntax
   call minpac#add('chase/vim-ansible-yaml', {'type': 'opt'})
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
-  " call minpac#add('othree/csscomplete.vim', {'type': 'opt'})
   call minpac#add('qbbr/vim-twig', {'type': 'opt'})
   call minpac#add('gabrielelana/vim-markdown', {'type': 'opt'})
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
@@ -53,8 +52,8 @@ if exists('*minpac#init')
   call minpac#add('w0rp/ale', {'type': 'opt'})
 
   " search
-  call minpac#add('yegappan/greplace', {'type': 'opt'})
-  call minpac#add('jremmen/vim-ripgrep')
+  call minpac#add('gabesoft/vim-ags')
+  " call minpac#add('ggreer/the_silver_searcher')
 
 endif
 

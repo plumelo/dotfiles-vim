@@ -37,6 +37,9 @@ autocmd vimrc InsertEnter * packadd vim-rsi
 " minisnip
 autocmd vimrc InsertEnter * call ondemand#minisnip()
 
+" search
+command! Search call ondemand#search()
+
 " ranger
 map <leader>f :packadd ranger.vim<CR>:Ranger<CR>
 

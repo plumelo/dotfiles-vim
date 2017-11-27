@@ -31,6 +31,10 @@ function! ondemand#gitgutter()
 endfunction
 
 
+function! ondemand#search()
+  packadd vim-ags
+endfunction
+
 function! ondemand#sign()
   packadd vim-sign-deferred
 endfunction
@@ -52,4 +56,18 @@ endfunction
 function! ondemand#minisnip()
   packadd vim-minisnip
   let g:minisnip_trigger = '<C-g>'
+endfunction
+
+" Strip the newline from the end of a string
+function! Chomp(str)
+  return substitute(a:str, '\n$', '', '')
+endfunction
+
+" Find a file and pass it to cmd
+function! ondemand#DmenuOpen(cmd)
+  let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
+  if empty(fname)
+    return
+  endif
+  execute a:cmd . " " . fname
 endfunction
