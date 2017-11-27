@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 " visibility
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:␣,trail:·,eol:↲
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:␣,trail:·,eol:¬
 set list
 set showbreak=\\
 
@@ -73,7 +73,7 @@ set ttimeoutlen=50
 set lazyredraw
 
 set mouse=a
-set number
+" set number
 
 if has('unnamedplus')
   set clipboard^=unnamedplus
