@@ -78,6 +78,5 @@ nmap <BS> :b<Space><C-z>
 " search
 nmap <C-f> :Ags<CR>
 nmap <C-g> :Ags<Space>
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 map ,f :<C-u>call ondemand#DmenuOpen("e")<cr>
