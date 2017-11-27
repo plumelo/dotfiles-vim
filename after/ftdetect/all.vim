@@ -25,6 +25,7 @@ let g:loaded_matchparen = 1
 let g:ags_agexe = 'ag'
 
 let g:indentLine_char = ''
+let g:indentLine_enabled = 0
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_fileType = ['ansible', 'yaml', 'javascript', 'twig', 'scss', 'css', 'html', 'php']
