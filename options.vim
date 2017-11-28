@@ -70,10 +70,10 @@ set wrap "Lines longer than the width of the window will wrap
 set wrapscan "Searches wrap around the end of the file
 set timeoutlen=1000
 set ttimeoutlen=50
-set lazyredraw
+" set lazyredraw
 
 set mouse=a
-" set number
+set number
 
 if has('unnamedplus')
   set clipboard^=unnamedplus
