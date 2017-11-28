@@ -16,5 +16,5 @@ endif
 
 set background=dark
 " colorscheme space-vim-dark
-colorscheme spacemacs-theme
-" colorscheme apprentice
+" colorscheme spacemacs-theme
+colorscheme apprentice
