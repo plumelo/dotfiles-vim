@@ -10,10 +10,11 @@ if !has('vim')
 endif
 
  " Enable true color
-" if exists('+termguicolors')
-"   set termguicolors
-" endif
+if exists('+termguicolors')
+  set termguicolors
+endif
 
-" set background=dark
+set background=dark
 " colorscheme space-vim-dark
-colorscheme apprentice
+colorscheme spacemacs-theme
+" colorscheme apprentice
