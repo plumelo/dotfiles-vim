@@ -10,7 +10,6 @@ autocmd FileType php call ondemand#linting()
 autocmd FileType ruby call ondemand#linting()
 " autocmd BufReadPre,BufRead *.yml packadd vim-ansible-yaml | set filetype=ansible
 autocmd BufReadPre,BufRead *.yml packadd vim-yaml
-let g:ansible_unindent_after_newline = 1
 autocmd BufReadPre,BufRead *.twig packadd vim-twig
 autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
 autocmd BufReadPre,BufRead *.css,scss packadd csscomplete.vim
