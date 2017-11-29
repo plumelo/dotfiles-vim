@@ -1,4 +1,13 @@
-autocmd BufReadPre,BufNewFile *.vim,.yaml,.jinja,.ansible,.css,.scss,.js,.javascript,.php call ondemand#linting()
+scriptencoding utf-8
+autocmd FileType yaml call ondemand#linting()
+autocmd FileType ansible call ondemand#linting()
+autocmd FileType vim call ondemand#linting()
+autocmd FileType jinja call ondemand#linting()
+autocmd FileType css call ondemand#linting()
+autocmd FileType scss call ondemand#linting()
+autocmd FileType javascript call ondemand#linting()
+autocmd FileType php call ondemand#linting()
+autocmd FileType ruby call ondemand#linting()
 " autocmd BufReadPre,BufRead *.yml packadd vim-ansible-yaml | set filetype=ansible
 autocmd BufReadPre,BufRead *.yml packadd vim-yaml
 let g:ansible_unindent_after_newline = 1
