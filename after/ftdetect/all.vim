@@ -24,6 +24,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+autocmd BufLeave * let b:winview = winsaveview()
+autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
+
 " editorconfig
 let g:EditorConfig_core_mode = 'python_builtin'
 
