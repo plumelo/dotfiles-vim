@@ -10,7 +10,6 @@ if exists('*minpac#init')
   call minpac#add('k-takata/minpac', {'type': 'opt'})
  " theme
   call minpac#add('millermedeiros/vim-statline')
-  " call minpac#add('Yggdroot/indentLine')
 
   " files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
@@ -23,12 +22,13 @@ if exists('*minpac#init')
   call minpac#add('iberianpig/tig-explorer.vim')
 
   " syntax
-  call minpac#add('chase/vim-ansible-yaml', {'type': 'opt'})
+  " call minpac#add('chase/vim-ansible-yaml', {'type': 'opt'})
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
   call minpac#add('qbbr/vim-twig', {'type': 'opt'})
   call minpac#add('gabrielelana/vim-markdown', {'type': 'opt'})
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
   call minpac#add('dag/vim-fish', { 'type': 'opt' })
+  call minpac#add('stephpy/vim-yaml', { 'type': 'opt' })
 
   " enhancemets
   call minpac#add('thirtythreeforty/lessspace.vim', {'type': 'opt'})

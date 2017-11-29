@@ -1,6 +1,6 @@
 autocmd BufReadPre,BufNewFile *.vim,.yaml,.jinja,.ansible call ondemand#linting()
-" autocmd BufReadPre,BufRead *.yml packadd ansible-vim
-autocmd BufReadPre,BufRead *.yml packadd vim-ansible-yaml
+" autocmd BufReadPre,BufRead *.yml packadd vim-ansible-yaml | set filetype=ansible
+autocmd BufReadPre,BufRead *.yml packadd vim-yaml
 let g:ansible_unindent_after_newline = 1
 autocmd BufReadPre,BufRead *.twig packadd vim-twig
 autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
