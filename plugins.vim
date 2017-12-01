@@ -29,6 +29,7 @@ if exists('*minpac#init')
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
   call minpac#add('dag/vim-fish', { 'type': 'opt' })
   call minpac#add('stephpy/vim-yaml', { 'type': 'opt' })
+  call minpac#add('kchmck/vim-coffee-script', { 'type': 'opt' })
 
   " enhancemets
   call minpac#add('thirtythreeforty/lessspace.vim', {'type': 'opt'})
