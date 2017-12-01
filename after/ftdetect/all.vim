@@ -8,6 +8,8 @@ autocmd FileType scss call ondemand#linting()
 autocmd FileType javascript call ondemand#linting()
 autocmd FileType php call ondemand#linting()
 autocmd FileType ruby call ondemand#linting()
+autocmd FileType json call ondemand#linting()
+autocmd FileType coffee call ondemand#linting()
 " autocmd BufReadPre,BufRead *.yml packadd vim-ansible-yaml | set filetype=ansible
 autocmd BufReadPre,BufRead *.yml packadd vim-yaml
 autocmd BufReadPre,BufRead *.twig packadd vim-twig
@@ -15,6 +17,7 @@ autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
 autocmd BufReadPre,BufRead *.md packadd vim-markdown
 autocmd BufReadPre,BufRead *.nginx packadd nginx.vim
 autocmd BufReadPre,BufRead *.fish packadd vim-fish
+autocmd BufReadPre,BufRead *.coffee packadd vim-coffee-script
 autocmd BufReadPre,BufRead *.json set conceallevel=0
 
 " Enable omni completion.
