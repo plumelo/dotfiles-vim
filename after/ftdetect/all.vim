@@ -12,7 +12,6 @@ autocmd FileType ruby call ondemand#linting()
 autocmd BufReadPre,BufRead *.yml packadd vim-yaml
 autocmd BufReadPre,BufRead *.twig packadd vim-twig
 autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
-autocmd BufReadPre,BufRead *.css,scss packadd csscomplete.vim
 autocmd BufReadPre,BufRead *.md packadd vim-markdown
 autocmd BufReadPre,BufRead *.nginx packadd nginx.vim
 autocmd BufReadPre,BufRead *.fish packadd vim-fish
@@ -39,4 +38,4 @@ let g:indentLine_char = ''
 let g:indentLine_enabled = 0
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
-let g:indentLine_fileType = ['ansible', 'yaml', 'javascript', 'twig', 'scss', 'css', 'html', 'php']
+let g:indentLine_fileType = ['ansible', 'yaml', 'javascript', 'twig', 'scss', 'css', 'html', 'php', 'config']
