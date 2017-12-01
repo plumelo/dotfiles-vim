@@ -15,6 +15,7 @@ autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
 autocmd BufReadPre,BufRead *.md packadd vim-markdown
 autocmd BufReadPre,BufRead *.nginx packadd nginx.vim
 autocmd BufReadPre,BufRead *.fish packadd vim-fish
+autocmd BufReadPre,BufRead *.json set conceallevel=0
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -39,3 +40,5 @@ let g:indentLine_enabled = 0
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_fileType = ['ansible', 'yaml', 'javascript', 'twig', 'scss', 'css', 'html', 'php', 'config']
+let g:indentLine_concealcursor=""
+let g:indentLine_fileTypeExclude = ['json', 'text', 'sh']
