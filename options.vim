@@ -1,84 +1,78 @@
 scriptencoding utf-8
 
-" visibility
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:␣,trail:·,eol:¬
+set number
+set display=lastline
+set laststatus=2
+set noruler
 set list
-set showbreak=\\
+set listchars=tab:▸\ ,extends:❯,precedes:❮
+set showmatch
+set matchtime=1
+set shortmess+=I
+set cmdheight=1 cmdwinheight=10
+set showbreak=\\\
+set fillchars=diff:⣿,vert:│
+set fillchars=diff:⣿,vert:\|
+set mouse=a
+set mousemodel=popup_setpos
+set nofoldenable
+set splitbelow
+set splitright
+set nostartofline
+set equalalways
+set synmaxcol=300
+set modeline
 
-" conceal
-set conceallevel=2
-set concealcursor=nv
-
-" completion
-set completeopt&
+set complete=.,w,b,u,t,i
+set complete&
 set completeopt=preview
-" set completeopt+=longest
 set completeopt=menuone
 set completeopt=noinsert
 set completeopt=noselect
 set omnifunc=syntaxcomplete#Complete
+set infercase
+set showfulltag
+set pumheight=10
 
-set infercase "Ignore case on insert completion
-set showfulltag "Show rich info for ins-completion
-
-set wildmenu " Command line autocompletion
+set wildmenu
 set wildmode=full
+set wildchar=9
 
-set nofoldenable "Disable fold
-set splitbelow " sohw preview window at bottom
-
-" indent
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set shiftround
+set formatoptions=qrn1j
 
-" lang
-set spelllang=en "Spell checking language
+set spelllang=en
 
-" search
-set incsearch "Incremental searching
-set ignorecase "Ignore case in search patterns
-set smartcase "Override the ignorecase option if the pattern contains upper case
-set hlsearch | nohlsearch "Highlight search patterns, support reloading
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch|nohlsearch
 
-" swap file
 set noswapfile
 set nobackup
+set history=1000
 
-"" misc
-set autoread "Automatically read file again which has been changed outside of Vim
-set backspace=indent,eol,start "Working of <BS>,<Del>,CTRL-W,CTRL-U
-set display=lastline "Display as much as possible of the last line
-" set grepprg=rg\ --vimgrep"Program to use for the :grep command
-" let g:grep_cmd_opts = '--line-numbers --noheading'
-set hidden "Display another buffer when current buffer isn't saved.
-set history=1024 "Amount of Command history
-set keywordprg=:help "Open Vim internal help by K command
-set laststatus=2 "Always display statusline
-set matchpairs+=<:> "Characters that form pairs
-set matchtime=1 "Tenths of a second to show the matching paren
-set modeline "Set Vim local buffer option to specific file
-set noerrorbells "Don't ring the bell for error messages
-set novisualbell "Don't use visual bell instead of beeping
-set nrformats-=octal "Bases Vim will consider for numbers(Ctrl-a,Ctrl-x)
-set shortmess+=I "Don't give the message when starting Vim :intro
-set virtualedit=block "Cursor can be positioned virtually when Visual-block mode
-set whichwrap=b,s,h,l,[,],<,> "Allow specified keys to move to the previous/next line
-set wrap "Lines longer than the width of the window will wrap
-set wrapscan "Searches wrap around the end of the file
-set timeoutlen=1000
-set ttimeoutlen=50
-" set lazyredraw
+set clipboard=unnamedplus
 
-set mouse=a
-set number
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+set ttyfast
+set lazyredraw
+set updatetime=750
 
-if has('unnamedplus')
-  set clipboard^=unnamedplus
-    else
-  set clipboard^=unnamed
-endif
+set autoread
+set backspace=indent,eol,start
+set hidden
+
+set virtualedit=block
+set whichwrap=b,s,h,l,[,],<,>
+set wrap
 
 set wildcharm=<C-z>
+
+set noerrorbells visualbell t_vb=

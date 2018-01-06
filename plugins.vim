@@ -8,59 +8,85 @@ silent! packadd minpac
 if exists('*minpac#init')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
- " theme
-  call minpac#add('millermedeiros/vim-statline')
 
   " files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
   call minpac#add('francoiscabrol/ranger.vim', {'type': 'opt'})
+  call minpac#add('ctrlpvim/ctrlp.vim', {'type': 'opt'})
 
   " git
   call minpac#add('tpope/vim-fugitive')
-  call minpac#add('sgur/vim-sign-deferred', {'type': 'opt'})
   call minpac#add('Xuyuanp/nerdtree-git-plugin')
-  call minpac#add('iberianpig/tig-explorer.vim')
+  call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
 
   " syntax
-  " call minpac#add('chase/vim-ansible-yaml', {'type': 'opt'})
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
-  call minpac#add('qbbr/vim-twig', {'type': 'opt'})
+  call minpac#add('lumiliet/vim-twig', {'type': 'opt'})
   call minpac#add('gabrielelana/vim-markdown', {'type': 'opt'})
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
   call minpac#add('dag/vim-fish', { 'type': 'opt' })
-  call minpac#add('stephpy/vim-yaml', { 'type': 'opt' })
+  " call minpac#add('pearofducks/ansible-vim', { 'type': 'opt' })
+  " call minpac#add('stephpy/vim-yaml', { 'type': 'opt' })
+  call minpac#add('pocke/iro.vim', { 'type': 'opt' })
   call minpac#add('kchmck/vim-coffee-script', { 'type': 'opt' })
+  call minpac#add('Valloric/MatchTagAlways', { 'type': 'opt' })
 
   " enhancemets
+  call minpac#add('itchyny/vim-parenmatch', {'type': 'opt'})
   call minpac#add('thirtythreeforty/lessspace.vim', {'type': 'opt'})
-  call minpac#add('Raimondi/delimitMate', {'type': 'opt'})
+  call minpac#add('jiangmiao/auto-pairs', {'type': 'opt'})
   call minpac#add('tpope/vim-rsi', {'type': 'opt'})
-  call minpac#add('tpope/vim-surround')
-  call minpac#add('tpope/vim-commentary')
-  call minpac#add('tpope/vim-repeat')
-  call minpac#add('kana/vim-niceblock')
-  call minpac#add('junegunn/vim-easy-align')
-  call minpac#add('itchyny/vim-parenmatch')
-  call minpac#add('bronson/vim-visual-star-search')
-  call minpac#add('editorconfig/editorconfig-vim')
-  call minpac#add('Yggdroot/indentLine')
+  call minpac#add('tpope/vim-surround', {'type': 'opt'})
+  call minpac#add('tpope/vim-commentary', {'type': 'opt'})
+  call minpac#add('tpope/vim-repeat', {'type': 'opt'})
+  call minpac#add('kana/vim-niceblock', {'type': 'opt'})
+  call minpac#add('lumiliet/vim-smart-object', { 'type': 'opt' })
+  call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
+  call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt'})
+  call minpac#add('vimplugin/project.vim', {'type': 'opt'})
+  call minpac#add('sgur/cmdline-completion', {'type': 'opt'})
+  call minpac#add('machakann/vim-highlightedyank', { 'type': 'opt' })
+  call minpac#add('henrik/vim-indexed-search', { 'type': 'opt' })
 
   " " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
+  call minpac#add('Shougo/neco-syntax', { 'type': 'opt' })
   call minpac#add('KeyboardFire/vim-minisnip', {'type': 'opt'})
 
   " linter
   call minpac#add('w0rp/ale', {'type': 'opt'})
 
   " search
-  call minpac#add('gabesoft/vim-ags')
-
+  call minpac#add('gabesoft/vim-ags', {'type': 'opt'})
 endif
+
+if has('gui_running')
+  set guioptions=Mc
+endif
+
+let g:loaded_2html_plugin      = 1
+let g:loaded_logiPat           = 1
+let g:loaded_getscriptPlugin   = 1
+let g:loaded_gzip              = 1
+let g:loaded_man               = 1
+let g:loaded_matchit           = 1
+let g:loaded_matchparen        = 1
+let g:loaded_netrwFileHandlers = 1
+let g:loaded_netrwPlugin       = 1
+let g:loaded_netrwSettings     = 1
+let g:loaded_rrhelper          = 1
+let g:loaded_shada_plugin      = 1
+let g:loaded_spellfile_plugin  = 1
+let g:loaded_tarPlugin         = 1
+let g:loaded_tutor_mode_plugin = 1
+let g:loaded_vimballPlugin     = 1
+let g:loaded_zipPlugin         = 1
 
 com! PackClean     packadd minpac | call minpac#clean()
 com! PackUpdate    packadd minpac | call minpac#clean() | call minpac#update()
 
 if !has('vim_starting')
   syntax enable
-  filetype plugin indent on
+  filetype on
+  filetype plugin on
 endif
