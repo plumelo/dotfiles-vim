@@ -9,4 +9,3 @@ endfunction
 
 autocmd BufEnter * call s:load_editorconfig()
 let g:EditorConfig_core_mode = 'python_builtin'
-
