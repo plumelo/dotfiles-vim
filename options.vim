@@ -1,6 +1,7 @@
 scriptencoding utf-8
 
 set number
+set numberwidth=1
 set display=lastline
 set laststatus=2
 set noruler

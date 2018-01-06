@@ -6,9 +6,9 @@ let g:loaded_statline_plugin = 1
 set laststatus=2
 
 "filename
-hi default link User1 Identifier
+hi default link User1 Special
 " flags
-hi default link User2 Statement
+hi default link User2 Constant
 " errors
 hi default link User3 Error
 " fugitive
@@ -92,7 +92,7 @@ endif
 " ---- Fugitive ----
 
 if !exists('g:statline_fugitive')
-  let g:statline_fugitive = 0
+  let g:statline_fugitive = 1
 endif
 if g:statline_fugitive
   set statusline+=%4*%{exists('g:loaded_fugitive')?fugitive#statusline():''}%*

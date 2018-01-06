@@ -29,6 +29,7 @@ if exists('*minpac#init')
   " call minpac#add('stephpy/vim-yaml', { 'type': 'opt' })
   call minpac#add('pocke/iro.vim', { 'type': 'opt' })
   call minpac#add('kchmck/vim-coffee-script', { 'type': 'opt' })
+  call minpac#add('othree/yajs.vim', { 'type': 'opt' })
   call minpac#add('Valloric/MatchTagAlways', { 'type': 'opt' })
 
   " enhancemets

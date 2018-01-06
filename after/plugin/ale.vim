@@ -13,9 +13,7 @@ AutoCmd FileType json packadd ale
 AutoCmd FileType coffee packadd ale
 
 let g:ale_sign_error = '→'
-" let g:ale_sign_error = 'ℯ'
 let g:ale_sign_warning = '→'
-" let g:ale_sign_warning = '⚠'
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
