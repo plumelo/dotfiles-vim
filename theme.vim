@@ -13,11 +13,10 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[0 q"
 
-" colorscheme space-vim-dark
 " colorscheme base16-monokai
 " colorscheme base16-spacemacs
+" colorscheme base16-gruvbox-dark-pale
 colorscheme apprentice
-" colorscheme molokai
 
 highlight ALEErrorSign guifg=red guibg=#262626
 highlight ALEWarningSign guifg=yellow guibg=#262626

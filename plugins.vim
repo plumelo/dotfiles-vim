@@ -25,12 +25,9 @@ if exists('*minpac#init')
   call minpac#add('gabrielelana/vim-markdown', {'type': 'opt'})
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
   call minpac#add('dag/vim-fish', { 'type': 'opt' })
-  " call minpac#add('pearofducks/ansible-vim', { 'type': 'opt' })
-  " call minpac#add('stephpy/vim-yaml', { 'type': 'opt' })
   call minpac#add('pocke/iro.vim', { 'type': 'opt' })
   call minpac#add('kchmck/vim-coffee-script', { 'type': 'opt' })
   call minpac#add('othree/yajs.vim', { 'type': 'opt' })
-  call minpac#add('Valloric/MatchTagAlways', { 'type': 'opt' })
 
   " enhancemets
   call minpac#add('itchyny/vim-parenmatch', {'type': 'opt'})
