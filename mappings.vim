@@ -12,8 +12,6 @@ noremap j gj
 noremap k gk
 
 " indent
-nnoremap > >>
-nnoremap < <<
 xnoremap > >gv
 xnoremap < <gv
 
