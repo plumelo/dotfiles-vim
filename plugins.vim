@@ -43,7 +43,6 @@ if exists('*minpac#init')
   call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt'})
   call minpac#add('vimplugin/project.vim', {'type': 'opt'})
   call minpac#add('sgur/cmdline-completion', {'type': 'opt'})
-  call minpac#add('machakann/vim-highlightedyank', { 'type': 'opt' })
   call minpac#add('henrik/vim-indexed-search', { 'type': 'opt' })
 
   " " completion
