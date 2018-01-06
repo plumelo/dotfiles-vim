@@ -20,3 +20,4 @@ colorscheme apprentice
 " colorscheme molokai
 
 highlight ALEErrorSign guifg=red guibg=#262626
+highlight ALEWarningSign guifg=yellow guibg=#262626
