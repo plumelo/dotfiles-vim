@@ -54,7 +54,7 @@ if &t_Co >= 256 || has('gui_running')
   hi Type             ctermbg=NONE ctermfg=103  guibg=NONE    guifg=#8787af cterm=NONE           gui=NONE
   hi Underlined       ctermbg=NONE ctermfg=66   guibg=NONE    guifg=#5f8787 cterm=underline      gui=underline
 
-  hi LineNr           ctermbg=234  ctermfg=242  guibg=#282828 guifg=#444444 cterm=NONE           gui=NONE
+  hi LineNr           ctermbg=234  ctermfg=242  guibg=#222222 guifg=#444444 cterm=NONE           gui=NONE
   hi NonText          ctermbg=NONE ctermfg=240  guibg=NONE    guifg=#585858 cterm=NONE           gui=NONE
 
   hi Pmenu            ctermbg=238  ctermfg=250  guibg=#444444 guifg=#bcbcbc cterm=NONE           gui=NONE
