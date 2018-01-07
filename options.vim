@@ -59,9 +59,12 @@ set history=1000
 
 set clipboard=unnamedplus
 
-set notimeout
-set ttimeout
-set ttimeoutlen=10
+set timeout
+set ttimeoutlen=100
+set timeoutlen=5000
+" set notimeout
+" set ttimeout
+" set ttimeoutlen=10
 set ttyfast
 set lazyredraw
 set updatetime=750
