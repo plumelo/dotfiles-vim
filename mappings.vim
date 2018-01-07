@@ -21,6 +21,7 @@ nnoremap <silent> <C-q> :<C-u>bw<CR>
 inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
 xnoremap <silent> <C-s> <C-C>:<C-u>update<CR>
 imap <silent> <C-z> <C-o>u
+inoremap <C-U> <C-G>u<C-U>
 
 " Easier to type
 noremap H ^
