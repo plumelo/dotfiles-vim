@@ -16,9 +16,11 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 nmap <silent> <Leader>w :call <SID>StripTrailingWhitespace()<CR>
 
-AutoCmd BufReadPre,BufRead *.vim packadd vim-whitespaces
-AutoCmd BufReadPre,BufRead *.js packadd vim-whitespaces
-AutoCmd BufReadPre,BufRead *.twig packadd vim-whitespaces
-AutoCmd FileType vim ToggleWhitespaces
-AutoCmd FileType javascript ToggleWhitespaces
-AutoCmd FileType twig ToggleWhitespaces
+AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.vim packadd vim-whitespaces | ToggleWhitespaces
+AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.js packadd vim-whitespaces | ToggleWhitespaces
+AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.twig packadd vim-whitespaces | ToggleWhitespaces
+AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.yml packadd vim-whitespaces | ToggleWhitespaces
+" AutoCmd FileType vim ToggleWhitespaces
+" AutoCmd FileType javascript ToggleWhitespaces
+" AutoCmd FileType twig ToggleWhitespaces
+" AutoCmd FileType yaml ToggleWhitespaces
