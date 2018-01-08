@@ -81,7 +81,7 @@ set switchbuf=useopen
 
 set virtualedit=block
 set whichwrap=b,s,h,l,[,],<,>
-set nowrap
+set wrap
 set nojoinspaces
 
 set wildcharm=<C-z>
