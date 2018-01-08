@@ -44,8 +44,9 @@ if exists('*minpac#init')
   call minpac#add('vimplugin/project.vim', {'type': 'opt'})
   call minpac#add('sgur/cmdline-completion', {'type': 'opt'})
   call minpac#add('henrik/vim-indexed-search', { 'type': 'opt' })
+  call minpac#add('rodrigoperazzo/vim-whitespaces', { 'type': 'opt' })
 
-  " " completion
+  " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
   call minpac#add('Shougo/neco-syntax', { 'type': 'opt' })
   call minpac#add('KeyboardFire/vim-minisnip', {'type': 'opt'})

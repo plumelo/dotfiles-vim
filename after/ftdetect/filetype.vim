@@ -15,3 +15,17 @@ autocmd BufReadPre,BufRead *.fish packadd vim-fish
 autocmd BufReadPre,BufRead *.coffee packadd vim-coffee-script
 autocmd BufReadPre,BufRead *.json set conceallevel=0
 autocmd BufReadPre,BufRead *.yamllint set filetype=yaml
+" autocmd BufReadPre,BufRead * packadd vim-whitespaces
+" autocmd BufReadPre,BufRead *.vim :ToggleWhitespaces<CR>
+" Additional syntax groups for php baselib
+let g:php_baselib = 1
+" Highlight unclosed ([]) - from $VIMRUNTIME/syntax/php.vim
+let g:php_parentError = 1
+" Assume strings contain HTML
+let g:php_htmlInStrings = 1
+
+" $VIMRUNTIME/indent/php.vim and 2072/
+" Don't indent after <?php opening
+let g:PHP_default_indenting = 0
+" Don't outdent the <?php tags to the first column
+let g:PHP_outdentphpescape  = 0

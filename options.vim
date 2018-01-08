@@ -12,8 +12,10 @@ set matchtime=1
 set shortmess+=I
 set cmdheight=1 cmdwinheight=10
 set showbreak=\\\
-set fillchars=diff:⣿,vert:│
-set fillchars=diff:⣿,vert:\|
+set fillchars+=diff:⣿
+set diffopt=vertical
+set diffopt+=filler
+set diffopt+=iwhite
 set mouse=a
 set mousemodel=popup_setpos
 set nofoldenable
@@ -44,7 +46,10 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set shiftround
+set smartindent
+set autoindent
 set formatoptions=qrn1j
+set formatoptions-=o
 
 set spelllang=en
 
@@ -59,12 +64,12 @@ set history=1000
 
 set clipboard=unnamedplus
 
-set timeout
-set ttimeoutlen=100
-set timeoutlen=5000
-" set notimeout
-" set ttimeout
-" set ttimeoutlen=10
+" set timeout
+" set ttimeoutlen=100
+" set timeoutlen=5000
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 set ttyfast
 set lazyredraw
 set updatetime=750
@@ -72,10 +77,12 @@ set updatetime=750
 set autoread
 set backspace=indent,eol,start
 set hidden
+set switchbuf=useopen
 
 set virtualedit=block
 set whichwrap=b,s,h,l,[,],<,>
-set wrap
+set nowrap
+set nojoinspaces
 
 set wildcharm=<C-z>
 

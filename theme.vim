@@ -16,6 +16,7 @@ let &t_EI = "\<Esc>[0 q"
 " colorscheme base16-monokai
 " colorscheme base16-spacemacs
 " colorscheme base16-gruvbox-dark-pale
+" colorscheme dko
 colorscheme apprentice
 
 highlight ALEErrorSign guifg=red guibg=#262626
