@@ -64,9 +64,6 @@ set history=1000
 
 set clipboard=unnamedplus
 
-" set timeout
-" set ttimeoutlen=100
-" set timeoutlen=5000
 set notimeout
 set ttimeout
 set ttimeoutlen=10
