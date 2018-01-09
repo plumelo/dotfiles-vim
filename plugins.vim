@@ -31,7 +31,6 @@ if exists('*minpac#init')
 
   " enhancemets
   call minpac#add('itchyny/vim-parenmatch', {'type': 'opt'})
-  call minpac#add('thirtythreeforty/lessspace.vim', {'type': 'opt'})
   call minpac#add('jiangmiao/auto-pairs', {'type': 'opt'})
   call minpac#add('tpope/vim-rsi', {'type': 'opt'})
   call minpac#add('tpope/vim-surround', {'type': 'opt'})

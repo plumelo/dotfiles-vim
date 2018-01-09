@@ -15,8 +15,7 @@ autocmd BufReadPre,BufRead *.fish packadd vim-fish
 autocmd BufReadPre,BufRead *.coffee packadd vim-coffee-script
 autocmd BufReadPre,BufRead *.json set conceallevel=0
 autocmd BufReadPre,BufRead *.yamllint set filetype=yaml
-" autocmd BufReadPre,BufRead * packadd vim-whitespaces
-" autocmd BufReadPre,BufRead *.vim :ToggleWhitespaces<CR>
+
 " Additional syntax groups for php baselib
 let g:php_baselib = 1
 " Highlight unclosed ([]) - from $VIMRUNTIME/syntax/php.vim
