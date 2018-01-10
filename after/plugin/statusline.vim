@@ -1,9 +1,9 @@
-if exists("g:loaded_statline_plugin")
+scriptencoding utf-8
+
+if exists('g:loaded_statline_plugin')
   finish
 endif
 let g:loaded_statline_plugin = 1
-
-set laststatus=2
 
 "filename
 hi default link User1 Special
@@ -15,7 +15,6 @@ hi default link User3 Error
 hi default link User4 Special
 " new alert
 hi default link User5 ErrorMsg
-
 
 " ====== basic info ======
 
@@ -29,47 +28,31 @@ endfunction
 " ---- number of buffers : buffer number ----
 
 function! StatlineBufCount()
-  if !exists("s:statline_n_buffers")
+  if !exists('s:statline_n_buffers')
     let s:statline_n_buffers = len(filter(range(1,bufnr('$')), 'buflisted(v:val)'))
   endif
   return s:statline_n_buffers
 endfunction
 
-if !exists('g:statline_show_n_buffers')
-  let g:statline_show_n_buffers = 1
-endif
-
-if g:statline_show_n_buffers
-  set statusline=[%{StatlineBufCount()}\:%n]\ %<
-  " only calculate buffers after adding/removing buffers
-  augroup statline_nbuf
-    autocmd!
-    autocmd BufAdd,BufDelete * unlet! s:statline_n_buffers
-  augroup END
-else
-  set statusline=[%n]\ %<
-endif
-
+set statusline=[%{StatlineBufCount()}\:%n]\ %<
+" only calculate buffers after adding/removing buffers
+augroup statline_nbuf
+  autocmd!
+  autocmd BufAdd,BufDelete * unlet! s:statline_n_buffers
+augroup END
 
 " ---- filename (relative or tail) ----
 
-if exists('g:statline_filename_relative')
-  set statusline+=%1*[%f]%*
-else
-  set statusline+=%1*[%t]%*
-endif
-
+set statusline+=%1*[%f]%*
 
 " ---- flags ----
 
 " (h:help:[help], w:window:[Preview], m:modified:[+][-], r:readonly:[RO])
 set statusline+=%2*%h%w%m%r%*
 
-
 " ---- filetype ----
 
 set statusline+=\ %y
-
 
 " ---- file format → file encoding ----
 
@@ -91,21 +74,7 @@ endif
 
 " ---- Fugitive ----
 
-if !exists('g:statline_fugitive')
-  let g:statline_fugitive = 1
-endif
-if g:statline_fugitive
-  set statusline+=%4*%{exists('g:loaded_fugitive')?fugitive#statusline():''}%*
-endif
-
-" ---- vim-virtualenv ----
-
-if !exists('g:statline_virtualenv')
-  let g:statline_virtualenv = 0
-endif
-if g:statline_virtualenv
-  set statusline+=%4*%{exists('g:virtualenv_loaded')?virtualenv#statusline():''}%*
-endif
+set statusline+=%4*%{exists('g:loaded_fugitive')?fugitive#statusline():''}%*
 
 " ---- paste mode ---
 call s:SetDefaultVal('g:statline_show_paste', '1')
@@ -118,29 +87,14 @@ endif
 
 set statusline+=%=
 
-
 " ---- current line and column ----
 
 " (-:left align, 14:minwid, l:line, L:nLines, c:column)
 set statusline+=%-14(\ L%l/%L:C%c\ %)
 
-
 " ----  scroll percent ----
 
 set statusline+=%P
-
-
-" ---- code of character under cursor ----
-
-if !exists('g:statline_show_charcode')
-  let g:statline_show_charcode = 0
-endif
-if g:statline_show_charcode
-  " (b:num, B:hex)
-  set statusline+=%9(\ \%b/0x\%B%)
-endif
-
-
 
 " ====== custom errors ======
 " ---- mixed indenting ----
@@ -157,21 +111,21 @@ endif
 "return '[mixed-indenting]' if spaces and tabs are used to indent
 "return an empty string if everything is fine
 function! StatlineTabWarning()
-  if !exists("b:statline_indent_warning")
+  if !exists('b:statline_indent_warning')
     let b:statline_indent_warning = ''
 
     if !&modifiable
       return b:statline_indent_warning
     endif
 
-    let tabs = search('^\t', 'nw') != 0
+    let l:tabs = search('^\t', 'nw') != 0
 
     "find spaces that arent used as alignment in the first indent column
-    let spaces = search('^ \{' . &ts . ',}[^\t]', 'nw') != 0
+    let l:spaces = search('^ \{' . &tabstop . ',}[^\t]', 'nw') != 0
 
-    if tabs && spaces
+    if l:tabs && l:spaces
       let b:statline_indent_warning = g:statline_mixed_indent_string
-    elseif (spaces && !&et) || (tabs && &et)
+    elseif (l:spaces && !&expandtab) || (l:tabs && &expandtab)
       let b:statline_indent_warning = '[&et]'
     endif
   endif
@@ -188,7 +142,6 @@ if g:statline_mixed_indent
   augroup END
 endif
 
-
 " --- trailing white space ---
 
 if !exists('g:statline_trailing_space')
@@ -196,7 +149,7 @@ if !exists('g:statline_trailing_space')
 endif
 
 function! StatlineTrailingSpaceWarning()
-  if !exists("b:statline_trailing_space_warning")
+  if !exists('b:statline_trailing_space_warning')
     if search('\s\+$', 'nw') != 0
       let b:statline_trailing_space_warning = '[\s]'
     else
