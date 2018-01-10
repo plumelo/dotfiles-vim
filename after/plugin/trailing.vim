@@ -16,12 +16,11 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 nmap <silent> <Leader>w :call <SID>StripTrailingWhitespace()<CR>
 
-nnoremap ,t :packadd vim-whitespaces<CR>:ToggleWhitespaces<CR>
+function! Wht()
+  set conceallevel=2 concealcursor=inc
+  " show leading whitespaces as gray dots
+  syn match LeadingWS /\(^\s*\)\@<=\s/ conceal cchar=·
+  highlight Conceal ctermbg=NONE ctermfg=238
+endfunction
 
-" AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.js packadd vim-whitespaces | ToggleWhitespaces
-" AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.twig packadd vim-whitespaces | ToggleWhitespaces
-" AutoCmd WinEnter,BufReadPre,BufRead,BufEnter *.yml packadd vim-whitespaces | ToggleWhitespaces
-" AutoCmd FileType vim ToggleWhitespaces
-" AutoCmd FileType javascript ToggleWhitespaces
-" AutoCmd FileType twig ToggleWhitespaces
-" AutoCmd FileType yaml ToggleWhitespaces
+AutoCmd WinEnter,BufEnter,BufReadPre * call Wht()
