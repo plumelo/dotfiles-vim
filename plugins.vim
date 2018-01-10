@@ -9,7 +9,7 @@ if exists('*minpac#init')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-  " files
+ " files
   call minpac#add('scrooloose/nerdtree', {'type': 'opt'})
   call minpac#add('francoiscabrol/ranger.vim', {'type': 'opt'})
   call minpac#add('ctrlpvim/ctrlp.vim', {'type': 'opt'})
@@ -22,6 +22,7 @@ if exists('*minpac#init')
   " syntax
   call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
   call minpac#add('lumiliet/vim-twig', {'type': 'opt'})
+  call minpac#add('othree/html5.vim', { 'type': 'opt' })
   call minpac#add('gabrielelana/vim-markdown', {'type': 'opt'})
   call minpac#add('chr4/nginx.vim', {'type': 'opt'})
   call minpac#add('dag/vim-fish', { 'type': 'opt' })
@@ -43,25 +44,26 @@ if exists('*minpac#init')
   call minpac#add('vimplugin/project.vim', {'type': 'opt'})
   call minpac#add('sgur/cmdline-completion', {'type': 'opt'})
   call minpac#add('henrik/vim-indexed-search', { 'type': 'opt' })
-  call minpac#add('rodrigoperazzo/vim-whitespaces', { 'type': 'opt' })
+  " call minpac#add('rodrigoperazzo/vim-whitespaces', { 'type': 'opt' })
+  " call minpac#add('adonis0147/prettyGuides', { 'type': 'opt' })
 
   " completion
   call minpac#add('Shougo/neocomplete.vim', {'type': 'opt'})
   call minpac#add('Shougo/neco-syntax', { 'type': 'opt' })
-  call minpac#add('KeyboardFire/vim-minisnip', {'type': 'opt'})
+  call minpac#add('KeyboardFire/vim-minisnip', { 'type': 'opt' })
 
   " linter
-  call minpac#add('w0rp/ale', {'type': 'opt'})
+  call minpac#add('w0rp/ale', { 'type': 'opt' })
 
   " search
-  call minpac#add('gabesoft/vim-ags', {'type': 'opt'})
+  call minpac#add('gabesoft/vim-ags', { 'type': 'opt' })
 endif
 
 if has('gui_running')
   set guioptions=Mc
 endif
 
-let g:loaded_2html_plugin      = 1
+" let g:loaded_2html_plugin      = 1
 let g:loaded_logiPat           = 1
 let g:loaded_getscriptPlugin   = 1
 let g:loaded_gzip              = 1
@@ -82,8 +84,10 @@ let g:loaded_zipPlugin         = 1
 com! PackClean     packadd minpac | call minpac#clean()
 com! PackUpdate    packadd minpac | call minpac#clean() | call minpac#update()
 
-if !has('vim_starting')
-  syntax enable
-  filetype on
+if has('autocmd')
   filetype plugin on
+  filetype indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
 endif
