@@ -7,6 +7,7 @@ let g:iro#enabled_filetypes = {
       \}
 
 autocmd BufReadPre,BufRead *.html.twig,*.twig packadd vim-twig
+autocmd BufReadPre,BufRead *.html packadd html5.vim
 autocmd BufReadPre,BufRead *.js packadd yajs.vim
 autocmd BufReadPre,BufRead *.j2 packadd Vim-Jinja2-Syntax
 autocmd BufReadPre,BufRead *.md packadd vim-markdown
