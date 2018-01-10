@@ -5,8 +5,8 @@ set numberwidth=1
 set display=lastline
 set laststatus=2
 set noruler
-" set list
-" set listchars=tab:▸\ ,extends:❯,precedes:❮
+set list
+set listchars=tab:▸\ ,extends:❯,precedes:❮
 set showmatch
 set matchtime=1
 set shortmess+=I
