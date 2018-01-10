@@ -21,5 +21,5 @@ set shell=sh
 
 runtime! plugins.vim
 runtime! theme.vim
-runtime! options.vim
+runtime! settings.vim
 runtime! mappings.vim
