@@ -16,11 +16,12 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 nmap <silent> <Leader>w :call <SID>StripTrailingWhitespace()<CR>
 
-function! Wht()
-  set conceallevel=2 concealcursor=inc
-  " show leading whitespaces as gray dots
-  syn match LeadingWS /\(^\s*\)\@<=\s/ conceal cchar=·
-  highlight Conceal ctermbg=NONE ctermfg=238
-endfunction
+" function! Wht()
+"   set conceallevel=2 concealcursor=inc
+"   " show leading whitespaces as gray dots
+"   syn match LeadingWS /\(^\s*\)\@<=\s/ conceal cchar=·
+"   highlight Conceal ctermbg=NONE ctermfg=238
+" endfunction
 
-AutoCmd WinEnter,BufEnter,BufReadPre * call Wht()
+" nnoremap ,l :<C-u>call Wht()<cr
+" AutoCmd WinEnter,BufEnter,BufReadPre,BufRead *.json set conceallevel=0
