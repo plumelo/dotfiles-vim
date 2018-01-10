@@ -1,6 +1,6 @@
 scriptencoding utf-8
 
-" Clear hlsearch and set nopaste
+" Clear hlsearch
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 
 " reload vim and file
@@ -39,6 +39,8 @@ command! Qa qa
 nnoremap <silent> <Tab>      :wincmd w<CR>
 nnoremap <silent> <S-Tab>      :wincmd W<CR>
 nnoremap <silent><expr> ,q winnr('$') != 1 ? ':<C-u>close<CR>' : ""
+nnoremap <silent> <C-Up> :vertical resize +1<CR>
+nnoremap <silent> <C-Down> :vertical resize -1<CR>
 
 " visual select
 nmap vv viw
