@@ -21,7 +21,6 @@ nnoremap <silent> <C-q> :<C-u>bw<CR>
 inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
 xnoremap <silent> <C-s> <C-C>:<C-u>update<CR>
 imap <silent> <C-z> <C-o>u
-inoremap <C-U> <C-G>u<C-U>
 
 " Easier to type
 noremap H ^
@@ -51,15 +50,6 @@ vnoremap . :normal .<CR>
 
 " numbers
 noremap ,n :set invnumber<CR>
-
-" substitute
-nnoremap <F6> :<C-u>%s/<C-r>//
-vnoremap <F6> :s/<C-r><C-w>/
-nnoremap <F5> :<C-u>%s/<C-r><C-w>/
-
-" Substitute
-nnoremap ,s :%s/
-vnoremap ,s :s/
 
 " snippets
 let g:minisnip_trigger = '<C-Space>'
