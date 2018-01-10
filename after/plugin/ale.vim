@@ -11,11 +11,17 @@ AutoCmd FileType php packadd ale
 AutoCmd FileType ruby packadd ale
 AutoCmd FileType json packadd ale
 AutoCmd FileType coffee packadd ale
+AutoCmd FileType html packadd ale
+AutoCmd FileType twig packadd ale
 
 let g:ale_sign_error = '→'
 let g:ale_sign_warning = '→'
+
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 let g:ale_fix_on_save = 1
-
+let g:ale_linters = {'html': ['eslint']}
+let g:ale_linter_aliases = {'html': 'javascript'}
+let g:ale_linters = {'twig': ['eslint']}
+let g:ale_linter_aliases = {'twig': 'javascript'}
