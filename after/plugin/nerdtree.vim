@@ -11,7 +11,7 @@ nmap - :File<CR>:NERDTreeToggle<CR>
 nmap <leader>- :NERDTreeFind<CR>
 
 function! NERDTreeRefresh()
-    if &filetype == "nerdtree"
-        silent exe substitute(mapcheck("R"), "<CR>", "", "")
-    endif
+  if &filetype == "nerdtree"
+    silent exe substitute(mapcheck("R"), "<CR>", "", "")
+  endif
 endfunction
