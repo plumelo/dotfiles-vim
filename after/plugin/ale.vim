@@ -21,7 +21,15 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'html': ['eslint']}
-let g:ale_linter_aliases = {'html': 'javascript'}
-let g:ale_linters = {'twig': ['eslint']}
-let g:ale_linter_aliases = {'twig': 'javascript'}
+let g:ale_linters = {
+      \ 'html': ['eslint'],
+      \ 'twig': ['eslint'],
+      \ 'html.twig': ['eslint']
+      \}
+let g:ale_linter_aliases = {
+      \ 'html': 'javascript',
+      \ 'twig': 'javascript',
+      \ 'html.twig': 'javascript'
+      \}
+" let g:ale_linters = {'twig': ['eslint']}
+" let g:ale_linter_aliases = {'twig': 'javascript'}
