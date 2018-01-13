@@ -3,7 +3,6 @@ scriptencoding utf-8
 set number
 set numberwidth=1
 set display=lastline
-set laststatus=2
 set noruler
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮
@@ -84,3 +83,28 @@ set nojoinspaces
 set wildcharm=<C-z>
 
 set noerrorbells visualbell t_vb=
+
+function! GitInfo()
+  let git = fugitive#head()
+  if git != ''
+    return ' '.fugitive#head()
+  else
+    return ''
+  endif
+endfunction
+
+set laststatus=2
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%8*\ %{GitInfo()}
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m\
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\
