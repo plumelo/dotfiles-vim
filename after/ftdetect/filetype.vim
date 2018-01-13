@@ -16,6 +16,7 @@ autocmd BufReadPre,BufRead *.fish packadd vim-fish
 autocmd BufReadPre,BufRead *.coffee packadd vim-coffee-script
 autocmd BufReadPre,BufRead *.json set conceallevel=0
 autocmd BufReadPre,BufRead *.yamllint set filetype=yaml
+autocmd BufEnter * :syntax sync fromstart
 
 " Additional syntax groups for php baselib
 let g:php_baselib = 1
