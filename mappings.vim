@@ -16,11 +16,11 @@ xnoremap > >gv
 xnoremap < <gv
 
 " quick save, quit and undo
-nnoremap <silent> <C-s> :<C-u>update<CR>
-nnoremap <silent> <C-q> :<C-u>bw<CR>
-inoremap <silent> <C-s> <Esc>:<C-u>update<CR>
-xnoremap <silent> <C-s> <C-C>:<C-u>update<CR>
-imap <silent> <C-z> <C-o>u
+nnoremap <C-s> :<C-u>update<CR>
+nnoremap <C-q> :<C-u>bw<CR>
+inoremap <C-s> <Esc>:<C-u>update<CR>
+vnoremap <C-s> <C-C>:<C-u>update<CR>
+inoremap <C-z> <C-o>u
 
 " Easier to type
 noremap H ^
